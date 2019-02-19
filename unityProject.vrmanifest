@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.flexfluidtest01.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\James Baber\\Documents\\Unity Projects\\FlexFluidTest01\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "FlexFluidTest01 [Testing]"
+        }
+      }
+    }
+  ]
+}
