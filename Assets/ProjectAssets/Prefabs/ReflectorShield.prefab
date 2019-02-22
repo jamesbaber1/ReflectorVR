@@ -35,6 +35,7 @@ Transform:
   m_LocalPosition: {x: 0.0069999397, y: 1.146, z: -0.18200016}
   m_LocalScale: {x: 0.077309094, y: 0.07730909, z: 0.07730909}
   m_Children:
+  - {fileID: 1187111626326461961}
   - {fileID: 6107443203038258534}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -263,6 +264,53 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.732983, y: 12.651228, z: 0.9247279}
   m_Center: {x: -0.011631176, y: 0.016015999, z: 0.018817974}
+--- !u!1 &2583831851289795473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1187111626326461961}
+  - component: {fileID: 1566451939828379255}
+  m_Layer: 0
+  m_Name: Turret Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1187111626326461961
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2583831851289795473}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.84774774, y: -1.7849671, z: 0.5118485}
+  m_LocalScale: {x: 12.935088, y: 12.93509, z: 12.93509}
+  m_Children: []
+  m_Father: {fileID: 381645180996794998}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1566451939828379255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2583831851289795473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a658a9faeb2b5b742a8f1d46147c8be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretPrefab: {fileID: 1128295319030913661, guid: 7ff4da81f5501424da359d7fbbc1680b,
+    type: 3}
+  radius: 6
+  numberOfTurrets: 8
 --- !u!1001 &6107443203038658542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -304,7 +352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 47582a95c8060e645bcbdc03baff7a77, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 47582a95c8060e645bcbdc03baff7a77, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
