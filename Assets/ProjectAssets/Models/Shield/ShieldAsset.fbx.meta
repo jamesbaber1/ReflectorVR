@@ -16,12 +16,15 @@ ModelImporter:
     400008: //RootNode
     400010: Sheild_GRP
     2100000: Shield_Texture
+    2100002: shieldOutline
     2300000: pTorus2
     2300002: pTorus3
     2300004: Sheild_base
+    2300006: //RootNode
     3300000: pTorus2
     3300002: pTorus3
     3300004: Sheild_base
+    3300006: //RootNode
     4300000: Sheild_base
     4300002: pTorus2
     4300004: pTorus3
