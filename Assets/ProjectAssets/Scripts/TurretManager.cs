@@ -8,6 +8,10 @@ public class TurretManager : MonoBehaviour
     public GameObject turretPrefab;
     public float radius;
     public float numberOfTurrets;
+    public int maxTurrets;
+    public float activationCooldown;
+    public float decreaseLazerCooldown;
+    public float increaseLazerSpeed;
 
     private int turretIterator = 0;
     private float cooldownFrames = 300;
@@ -24,7 +28,7 @@ public class TurretManager : MonoBehaviour
         while (iterations < numberOfTurrets)
         {
             Vector3 position = new Vector3(transform.position.x + radius * Mathf.Cos(Mathf.Deg2Rad * angle), transform.position.y, transform.position.z + radius * Mathf.Sin(Mathf.Deg2Rad * angle));
-            Quaternion rot = Quaternion.AngleAxis(-angle - 90, Vector3.up);
+            Quaternion rot = Quaternion.AngleAxis(-angle /*- 90*/, Vector3.up);
             GameObject o = Instantiate(turretPrefab, position, rot);
             turrets.Add(o);
             angle += (360 / numberOfTurrets);
@@ -52,7 +56,7 @@ public class TurretManager : MonoBehaviour
         else
         {
             frames++;
-            if (frames % cooldownFrames == 0)
+            if (frames >= cooldownFrames && turrets[turretIterator].GetComponent<TurretScript>().getActiveNum() < maxTurrets)
             {
                 if (turretIterator >= numberOfTurrets)
                 {
@@ -68,15 +72,15 @@ public class TurretManager : MonoBehaviour
                     findTurret = true;
                 }
                 frames = 0;
-                if (cooldownFrames > 10)
+                if (cooldownFrames > /*10*/ activationCooldown)
                 {
-                    cooldownFrames -= 10;
+                    cooldownFrames -= activationCooldown/*10*/;
                     for (int i = 0; i < numberOfTurrets; i++)
                     {
                         GameObject o = turrets[i];
                         TurretScript t = o.GetComponent<TurretScript>();
-                        t.SetLazerCooldown(t.GetLazerCooldown() - 0.1f);
-                        t.SetLazerSpeed(t.GetLazerSpeed() + .1f);
+                        t.SetLazerCooldown(t.GetLazerCooldown() - /*0.1f*/decreaseLazerCooldown);
+                        t.SetLazerSpeed(t.GetLazerSpeed() + /*.1f*/increaseLazerSpeed);
                     }
                 }
 

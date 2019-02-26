@@ -5,16 +5,21 @@ using UnityEngine;
 public class TurretScript : MonoBehaviour
 {
 
+    private static int activeNum;
+
     public GameObject lazer;
+    public float minLazerCooldown;
 
     private bool isActive = false;
+    public GameObject light;
     private Material mat;
     public float lazerCooldown;
+    public GameObject spawnPos;
 
     // Start is called before the first frame update
     void Start()
     {
-        mat = GetComponent<Renderer>().material;
+        mat = light.GetComponent<Renderer>().material;
         SpawnLazer();
     }
 
@@ -28,7 +33,7 @@ public class TurretScript : MonoBehaviour
     {
         if(isActive == true)
         {
-            Instantiate(lazer, transform.position, transform.rotation);
+            Instantiate(lazer, spawnPos.transform.position, transform.rotation);
             mat.color = Color.green;
         }
         else
@@ -41,6 +46,20 @@ public class TurretScript : MonoBehaviour
     public void setActive(bool a)
     {
         isActive = a;
+        if(a == true)
+        {
+            activeNum++;
+        }
+        else
+        {
+            activeNum--;
+        }
+        
+    }
+
+    public int getActiveNum()
+    {
+        return activeNum;
     }
 
     public bool getActive()
@@ -50,7 +69,7 @@ public class TurretScript : MonoBehaviour
 
     public void SetLazerCooldown(float f)
     {
-        if(f >= 0.25f)
+        if(f >= /*0.25f*/minLazerCooldown)
         {
             lazerCooldown = f;
         }
@@ -79,6 +98,9 @@ public class TurretScript : MonoBehaviour
             isActive = false;
             mat.color = Color.red;
             Destroy(other.gameObject);
+            /*
+             *  POINT DETECTION WILL HAPPEN HERE
+            */
         }
     }
 }

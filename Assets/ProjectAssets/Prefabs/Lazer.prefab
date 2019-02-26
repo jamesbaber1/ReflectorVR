@@ -92,9 +92,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5904032bb64fb5419bcee504cf649a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shield: {fileID: 7197341592809401223, guid: 55590ad70bfa4bf4db5d87cf67afc2a3, type: 3}
-  speed: 4
-  maxSpeed: 10
+  shield: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+  speed: 2
+  maxSpeed: 5
 --- !u!54 &121151846650727235
 Rigidbody:
   m_ObjectHideFlags: 0

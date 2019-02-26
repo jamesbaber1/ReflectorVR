@@ -50973,6 +50973,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8502688089263365021, guid: 443dd8aaddc51d2458d289d4fa7e30ab,
+        type: 3}
+      propertyPath: maxTurrets
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502688089263365021, guid: 443dd8aaddc51d2458d289d4fa7e30ab,
+        type: 3}
+      propertyPath: activationCooldown
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502688089263365021, guid: 443dd8aaddc51d2458d289d4fa7e30ab,
+        type: 3}
+      propertyPath: decreaseLazerCooldown
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502688089263365021, guid: 443dd8aaddc51d2458d289d4fa7e30ab,
+        type: 3}
+      propertyPath: increaseLazerSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 443dd8aaddc51d2458d289d4fa7e30ab, type: 3}
 --- !u!1001 &8422195461492788893
@@ -51062,5 +51082,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e2d3a4d723cf1dc4eab1d919f3324dbc, type: 2}
+    - target: {fileID: 1059294372722428511, guid: 8ae4673c9d399d04d8c7fd21a1215686,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ae4673c9d399d04d8c7fd21a1215686, type: 3}
