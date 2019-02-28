@@ -3962,12 +3962,12 @@ PrefabInstance:
     - target: {fileID: 8502688089263365021, guid: 443dd8aaddc51d2458d289d4fa7e30ab,
         type: 3}
       propertyPath: activationCooldown
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8502688089263365021, guid: 443dd8aaddc51d2458d289d4fa7e30ab,
         type: 3}
       propertyPath: decreaseLazerCooldown
-      value: 0.1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8502688089263365021, guid: 443dd8aaddc51d2458d289d4fa7e30ab,
         type: 3}

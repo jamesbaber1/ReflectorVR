@@ -5,29 +5,32 @@ using UnityEngine;
 public class LazerMovement : MonoBehaviour
 {
 
-    
+
     public float speed;
     public float maxSpeed;
 
 
     private GameObject target;
-    private Vector3 toPlayer;
+    public Vector3 toPlayer;
     private Collider col;
+    private Vector3 initialPos;
     // Start is called before the first frame update
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("MainCamera");
+        target = GameObject.FindGameObjectWithTag("Shield");
         toPlayer = (target.transform.position - transform.position).normalized;
         transform.rotation = Quaternion.LookRotation(toPlayer);
-        Destroy(gameObject, 2);
+        Destroy(gameObject, 4);
         col = GetComponent<Collider>();
+        //this.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+        initialPos = transform.position;
         Invoke("EnableCollision", 0.25f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void FixedUpdate()
@@ -37,21 +40,30 @@ public class LazerMovement : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.CompareTag("Shield") == true)
+
+        if (other.gameObject.CompareTag("Shield") == true)
         {
             Debug.Log("Shield and lazer are colliding");
-            toPlayer = -Vector3.Reflect(other.GetContact(0).point, other.GetContact(0).normal).normalized;
-            toPlayer.y = 0;//shield.transform.position.y;
-            toPlayer.Normalize();
+
+            //toPlayer = -Vector3.Reflect(other.GetContact(0).point, other.GetContact(0).normal).normalized;
+            //toPlayer.y = 0;//shield.transform.position.y;
+            //toPlayer.Normalize();
+            //this.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+            //Invoke("disableKinematic", 0.25f);
+
+            toPlayer = (initialPos - transform.position).normalized;
             transform.rotation = Quaternion.LookRotation(toPlayer);
             //get unit normal of sheild and seet the toPlayer equal to that
             //also reset the rotation or call a function that rotates the object over time
         }
+
     }
 
     void EnableCollision()
     {
         col.enabled = true;
+        //this.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+
     }
 
     public float GetSpeed()
@@ -61,7 +73,7 @@ public class LazerMovement : MonoBehaviour
 
     public void SetSpeed(float f)
     {
-        if(f <= maxSpeed)
+        if (f <= maxSpeed)
         {
             speed = f;
         }

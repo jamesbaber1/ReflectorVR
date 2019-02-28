@@ -56,7 +56,7 @@ public class TurretManager : MonoBehaviour
         else
         {
             frames++;
-            if (frames >= cooldownFrames && turrets[turretIterator].GetComponent<TurretScript>().getActiveNum() < maxTurrets)
+            if (frames >= cooldownFrames )/*&& turrets[turretIterator].GetComponent<TurretScript>().getActiveNum() < maxTurrets)*/
             {
                 if (turretIterator >= numberOfTurrets)
                 {
@@ -94,7 +94,6 @@ public class TurretManager : MonoBehaviour
         for (int i = 0; i < numberOfTurrets; i++)
         {
             int rand = (int)(Random.value * turrets.Count);
-            Debug.Log("index: " + i + " will be: " + rand);
             turretOrder.Add(turrets[rand]);
             turrets.RemoveAt(rand);
         }
