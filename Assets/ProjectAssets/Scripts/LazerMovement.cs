@@ -5,16 +5,19 @@ using UnityEngine;
 public class LazerMovement : MonoBehaviour
 {
 
-    public GameObject shield;
+    
     public float speed;
     public float maxSpeed;
 
+
+    private GameObject target;
     private Vector3 toPlayer;
     private Collider col;
     // Start is called before the first frame update
     void Start()
     {
-        toPlayer = (shield.transform.position - transform.position).normalized;
+        target = GameObject.FindGameObjectWithTag("MainCamera");
+        toPlayer = (target.transform.position - transform.position).normalized;
         transform.rotation = Quaternion.LookRotation(toPlayer);
         Destroy(gameObject, 2);
         col = GetComponent<Collider>();
