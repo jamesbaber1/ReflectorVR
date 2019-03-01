@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Lazer
   - Shield
+  - FxTemporaire
+  - projectile
+  - turret
   layers:
   - Default
   - TransparentFX

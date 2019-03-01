@@ -1,23 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class LazerMovement : MonoBehaviour
 {
 
 
     public float speed;
     public float maxSpeed;
+    public AudioClip hitShield;
 
-
+    private GameObject Player;
     private GameObject target;
     public Vector3 toPlayer;
     private Collider col;
     private Vector3 initialPos;
+    private float laserDistance;
+    private PlayerHealth playerInfo;
+    AudioSource hitShieldSound;
+
     // Start is called before the first frame update
     void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Shield");
+        target = GameObject.FindGameObjectWithTag("MainCamera");
         toPlayer = (target.transform.position - transform.position).normalized;
         transform.rotation = Quaternion.LookRotation(toPlayer);
         Destroy(gameObject, 4);
@@ -25,12 +29,21 @@ public class LazerMovement : MonoBehaviour
         //this.gameObject.GetComponent<Rigidbody>().isKinematic = true;
         initialPos = transform.position;
         Invoke("EnableCollision", 0.25f);
+        Player = GameObject.Find("Player");
+        playerInfo = Player.GetComponent<PlayerHealth>();
+        hitShieldSound = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        laserDistance = Vector3.Distance(target.transform.position, this.transform.position);
 
+        if (laserDistance < 0.05f)
+        {
+            playerInfo.decreaseHealth();
+        }
     }
 
     void FixedUpdate()
@@ -53,9 +66,16 @@ public class LazerMovement : MonoBehaviour
 
             toPlayer = (initialPos - transform.position).normalized;
             transform.rotation = Quaternion.LookRotation(toPlayer);
+
+            playerInfo.increaseScore();
+
+            hitShieldSound.clip = hitShield;
+            hitShieldSound.Play();
             //get unit normal of sheild and seet the toPlayer equal to that
             //also reset the rotation or call a function that rotates the object over time
         }
+
+
 
     }
 
@@ -79,3 +99,4 @@ public class LazerMovement : MonoBehaviour
         }
     }
 }
+

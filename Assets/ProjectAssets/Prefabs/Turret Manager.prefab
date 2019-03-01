@@ -47,3 +47,7 @@ MonoBehaviour:
     type: 3}
   radius: 6
   numberOfTurrets: 8
+  maxTurrets: 5
+  activationCooldown: 5
+  decreaseLazerCooldown: 10
+  increaseLazerSpeed: 3
