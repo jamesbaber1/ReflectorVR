@@ -55,8 +55,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\MoveUp.cs" />
+    <Compile Include="Assets\ProjectAssets\Scripts\CrawlingEnemy.cs" />
+    <Compile Include="Assets\ProjectAssets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\ProjectAssets\Scripts\FlyingEnemy.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\LazerMovement.cs" />
+    <Compile Include="Assets\ProjectAssets\Scripts\MoveUp.cs" />
+    <Compile Include="Assets\ProjectAssets\Scripts\MovingEnemy.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\ShieldScript.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\TurretManager.cs" />
