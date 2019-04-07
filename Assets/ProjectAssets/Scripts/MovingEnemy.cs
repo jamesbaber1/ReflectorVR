@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovingEnemy : MonoBehaviour
+public class MovingEnemy : Enemy
 {
     // Start is called before the first frame update
     void Start()
@@ -15,4 +15,10 @@ public class MovingEnemy : MonoBehaviour
     {
         
     }
+
+    protected void MoveEnemy()
+    {
+
+    }
+
 }
