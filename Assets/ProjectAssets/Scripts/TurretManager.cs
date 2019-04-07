@@ -42,7 +42,7 @@ public class TurretManager : MonoBehaviour
     {
         if (findTurret == true)
         {
-            if (turrets[turretIterator].GetComponent<TurretScript>().getActive() == false)
+            if (turrets[turretIterator].GetComponent<Enemy>().getActive() == false)
             {
                 activateTurret(turretIterator);
                 findTurret = false;
@@ -62,7 +62,7 @@ public class TurretManager : MonoBehaviour
                 {
                     turretIterator = 0;
                 }
-                if (turrets[turretIterator].GetComponent<TurretScript>().getActive() == false)
+                if (turrets[turretIterator].GetComponent<Enemy>().getActive() == false)
                 {
                     activateTurret(turretIterator);
                     turretIterator++;
@@ -78,7 +78,7 @@ public class TurretManager : MonoBehaviour
                     for (int i = 0; i < numberOfTurrets; i++)
                     {
                         GameObject o = turrets[i];
-                        TurretScript t = o.GetComponent<TurretScript>();
+                        Enemy t = o.GetComponent<Enemy>();
                         t.SetLazerCooldown(t.GetLazerCooldown() - /*0.1f*/decreaseLazerCooldown);
                         t.SetLazerSpeed(t.GetLazerSpeed() + /*.1f*/increaseLazerSpeed);
                     }
@@ -105,14 +105,14 @@ public class TurretManager : MonoBehaviour
     void activateTurret(int i)
     {
         GameObject o = turrets[i];
-        TurretScript t = o.GetComponent<TurretScript>();
+        Enemy t = o.GetComponent<Enemy>();
         t.setActive(true);
     }
 
     void deactivateTurret(int i)
     {
         GameObject o = turrets[i];
-        TurretScript t = o.GetComponent<TurretScript>();
+        Enemy t = o.GetComponent<Enemy>();
         t.setActive(false);
     }
 

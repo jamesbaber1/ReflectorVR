@@ -1112,6 +1112,10 @@
       <Project>{F53E0209-91F1-59E5-2812-6C8566494178}</Project>      <Name>SteamVR</Name>    </ProjectReference>
     <ProjectReference Include="SteamVR_Windows_EditorHelper.csproj">
       <Project>{241922C7-1F7C-D84D-1887-576E2234F564}</Project>      <Name>SteamVR_Windows_EditorHelper</Name>    </ProjectReference>
+    <ProjectReference Include="NavMeshComponentsEditor.csproj">
+      <Project>{45F2F832-56FF-C76E-BE56-F3B60C2BBA5E}</Project>      <Name>NavMeshComponentsEditor</Name>    </ProjectReference>
+    <ProjectReference Include="NavMeshComponents.csproj">
+      <Project>{221E51BF-38A4-A80E-D83D-70DC856C2C3C}</Project>      <Name>NavMeshComponents</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
