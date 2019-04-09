@@ -12,6 +12,7 @@ public class TurretManager : MonoBehaviour
     public float activationCooldown;
     public float decreaseLazerCooldown;
     public float increaseLazerSpeed;
+    public GameObject player;
 
     private int turretIterator = 0;
     private float cooldownFrames = 300;
@@ -28,7 +29,7 @@ public class TurretManager : MonoBehaviour
         while (iterations < numberOfTurrets)
         {
             Vector3 position = new Vector3(transform.position.x + radius * Mathf.Cos(Mathf.Deg2Rad * angle), transform.position.y, transform.position.z + radius * Mathf.Sin(Mathf.Deg2Rad * angle));
-            Quaternion rot = Quaternion.AngleAxis(-angle /*- 90*/, Vector3.up);
+            Quaternion rot = Quaternion.AngleAxis(-angle, Vector3.up);
             GameObject o = Instantiate(turretPrefab, position, rot);
             turrets.Add(o);
             angle += (360 / numberOfTurrets);
@@ -102,11 +103,30 @@ public class TurretManager : MonoBehaviour
         turrets = turretOrder;
     }
 
+    public bool isInFOV(Enemy e)
+    {
+        Debug.Log("Camera Forward: " + Camera.main.transform.forward);
+        Debug.Log("Enemy Forward: " + e.gameObject.transform.forward);
+        Debug.Log("Dot product: " + Vector3.Dot(e.gameObject.transform.forward, Camera.main.transform.forward));
+        if (Vector3.Dot(e.gameObject.transform.forward, Camera.main.transform.forward) >= 0)
+        {
+            Debug.Log("This enemy is within the camera's field of view!");
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     void activateTurret(int i)
     {
         GameObject o = turrets[i];
         Enemy t = o.GetComponent<Enemy>();
-        t.setActive(true);
+        if(isInFOV(t) == true)
+        {
+            t.setActive(true);
+        }
     }
 
     void deactivateTurret(int i)

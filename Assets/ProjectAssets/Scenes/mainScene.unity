@@ -2002,7 +2002,7 @@ MonoBehaviour:
   instructionText: {fileID: 725978648}
   TurretManager: {fileID: 348246833}
   death: {fileID: 0}
-  countDown: 15
+  countDown: 3
 --- !u!82 &727321412
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2648,7 +2648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveUpVal: 0.025
-  maxVal: 21.6
+  maxVal: 50
   minVal: 0
   movingUp: 1
 --- !u!1001 &1139036850
@@ -2909,6 +2909,10 @@ PrefabInstance:
     - target: {fileID: 100042, guid: 2521cc936b05f30439ae9ba40f55f102, type: 3}
       propertyPath: m_Name
       value: RoomLayoutAsset03
+      objectReference: {fileID: 0}
+    - target: {fileID: 100042, guid: 2521cc936b05f30439ae9ba40f55f102, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 2521cc936b05f30439ae9ba40f55f102, type: 3}
       propertyPath: m_IsActive
@@ -5287,7 +5291,7 @@ PrefabInstance:
     - target: {fileID: 4870967460242271867, guid: 443dd8aaddc51d2458d289d4fa7e30ab,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8087283805903207395, guid: 443dd8aaddc51d2458d289d4fa7e30ab,
         type: 3}
@@ -5374,6 +5378,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8502688089263365021, guid: 443dd8aaddc51d2458d289d4fa7e30ab,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 727321408}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 443dd8aaddc51d2458d289d4fa7e30ab, type: 3}
 --- !u!1001 &8422195461492788893
