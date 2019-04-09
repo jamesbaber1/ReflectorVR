@@ -32,12 +32,14 @@ public class MoveUp : MonoBehaviour
 
         if (movingUp)
         {
-            rb.velocity = new Vector3(0, moveUpVal, 0);
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + moveUpVal, gameObject.transform.position.z);
         }
+        /*
         else
         {
-            rb.velocity = new Vector3(0, /*-moveUpVal*/0, 0);
+            rb.velocity = new Vector3(0, 0, 0);
         }
+        */
 
     }
 }

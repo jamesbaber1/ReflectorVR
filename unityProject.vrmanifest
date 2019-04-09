@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.flexfluidtest01.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\ryanp\\Documents\\VIST370\\ReflectorVR\\actions.json",
+      "action_manifest_path": "C:\\Users\\privateryan1111\\Documents\\VIST370\\ReflectorVR\\actions.json",
       "strings": {
         "en_us": {
           "name": "FlexFluidTest01 [Testing]"
