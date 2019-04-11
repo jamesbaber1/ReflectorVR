@@ -19,7 +19,7 @@ public class LazerMovement : MonoBehaviour
     AudioSource hitShieldSound;
 
     // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
         target = GameObject.FindGameObjectWithTag("MainCamera");
         toPlayer = (target.transform.position - transform.position).normalized;

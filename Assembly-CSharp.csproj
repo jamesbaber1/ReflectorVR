@@ -68,7 +68,9 @@
     <Compile Include="Assets\ProjectAssets\Scripts\LazerMovement.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\MoveUp.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\MovingEnemy.cs" />
+    <Compile Include="Assets\ProjectAssets\Scripts\PistolScript.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\PlayerHealth.cs" />
+    <Compile Include="Assets\ProjectAssets\Scripts\PlayerLazerMovement.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\ShieldScript.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\TurretManager.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\TurretScript.cs" />

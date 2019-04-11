@@ -224,7 +224,7 @@ PrefabInstance:
     - target: {fileID: 8422195461764054569, guid: 8ae4673c9d399d04d8c7fd21a1215686,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.24214843
+      value: 0.604
       objectReference: {fileID: 0}
     - target: {fileID: 8422195461764054569, guid: 8ae4673c9d399d04d8c7fd21a1215686,
         type: 3}
@@ -271,10 +271,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2696452621699048407, guid: 8ae4673c9d399d04d8c7fd21a1215686,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5cd1af59433346c45b6f643c975db6f0, type: 2}
     - target: {fileID: 8422195461764054564, guid: 8ae4673c9d399d04d8c7fd21a1215686,
         type: 3}
       propertyPath: m_UseGravity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422195461764054564, guid: 8ae4673c9d399d04d8c7fd21a1215686,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422195461764054570, guid: 8ae4673c9d399d04d8c7fd21a1215686,
+        type: 3}
+      propertyPath: estimateOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ae4673c9d399d04d8c7fd21a1215686, type: 3}
@@ -324,7 +339,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
+  m_VoxelSize: 0.33333334
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: 8bf7f2a3757177b4ea42cdfbd1605fde, type: 2}
 --- !u!64 &607275427
@@ -637,7 +652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18462ef39b6a8674dac1796aac286e6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretPrefab: {fileID: 3317470322769261939, guid: 58c1eb371a7411241941131b9c7be149,
+  turretPrefab: {fileID: 4362573510699008954, guid: 69b5f54f73827f64793916050c023665,
     type: 3}
   radius: 10
   numberOfTurrets: 8
@@ -696,8 +711,8 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
---- !u!65 &1899225448
-BoxCollider:
+--- !u!64 &1899225448
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -706,9 +721,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 3, z: 1.0000002}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1899225449
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -873,7 +889,7 @@ PrefabInstance:
     - target: {fileID: 8059980246568412589, guid: 8fcbd2f0bb53b0341b58d335833b8048,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8059980246568412591, guid: 8fcbd2f0bb53b0341b58d335833b8048,
         type: 3}
