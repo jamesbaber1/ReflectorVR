@@ -9,7 +9,6 @@ TagManager:
   - FxTemporaire
   - projectile
   - turret
-  - Crawler
   layers:
   - Default
   - TransparentFX
@@ -20,9 +19,9 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - Enemy
-  - PlayerSpace
-  - FlyingEnemyNavMesh
+  - 
+  - 
+  - 
   - 
   - 
   - 

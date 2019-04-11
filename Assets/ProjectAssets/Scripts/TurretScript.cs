@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurretScript : Enemy
+public class TurretScript : MonoBehaviour
 {
 
-    //private static int activeNum;
+    private static int activeNum;
 
-    //public GameObject lazer;
-    //public float minLazerCooldown;
+    public GameObject lazer;
+    public float minLazerCooldown;
 
     private bool isActive = false;
-    //public GameObject light;
-    //private Material mat;
-    //public float lazerCooldown;
-    //public GameObject spawnPos;
+    public GameObject light;
+    private Material mat;
+    public float lazerCooldown;
+    public GameObject spawnPos;
 
     // Start is called before the first frame update
     void Start()
     {
-        //mat = light.GetComponent<Renderer>().material;
+        mat = light.GetComponent<Renderer>().material;
         SpawnLazer();
     }
 
@@ -28,23 +28,21 @@ public class TurretScript : Enemy
     {
 
     }
-    /*
+
     void SpawnLazer()
     {
         if(isActive == true)
         {
             Instantiate(lazer, spawnPos.transform.position, transform.rotation);
-            //mat.color = Color.green; //CHANGE LIGHT SOURCE TO ON
+            mat.color = Color.green;
         }
         else
         {
-            //mat.color = Color.red; //CHANGE LIGHT SOURCE TO OFF
+            mat.color = Color.red;
         }
         Invoke("SpawnLazer", lazerCooldown);
     }
-    */
 
-    /*
     public void setActive(bool a)
     {
         isActive = a;
@@ -55,35 +53,28 @@ public class TurretScript : Enemy
         else
         {
             activeNum--;
-        }  
+        }
+        
     }
-    */
 
-    /*
     public int getActiveNum()
     {
         return activeNum;
     }
-    */
 
-    /*
     public bool getActive()
     {
         return isActive;
     }
-    */
 
-     /*
     public void SetLazerCooldown(float f)
     {
-        if(f >= minLazerCooldown)
+        if(f >= /*0.25f*/minLazerCooldown)
         {
             lazerCooldown = f;
         }
     }
-*/
 
-    /*
     public void SetLazerSpeed(float f)
     {
         lazer.GetComponent<LazerMovement>().SetSpeed(f);
@@ -105,9 +96,11 @@ public class TurretScript : Enemy
         {
             Debug.Log("Turret and lazer are colliding");
             isActive = false;
-            //mat.color = Color.red;
+            mat.color = Color.red;
             Destroy(other.gameObject);
+            /*
+             *  POINT DETECTION WILL HAPPEN HERE
+            */
         }
     }
-    */
 }
