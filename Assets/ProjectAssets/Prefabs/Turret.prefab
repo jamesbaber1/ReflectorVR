@@ -33,7 +33,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2215270800161558991}
-  - {fileID: 1880470859821529396}
+  - {fileID: 1880470859821529406}
   - {fileID: 3205240322281170503}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lazer: {fileID: 121151846650727232, guid: 34362e74452ece04ebe03ae000686838, type: 3}
   minLazerCooldown: 0.5
-  light: {fileID: 3205240322281208433}
+  light: {fileID: 3205240322281208423}
   lazerCooldown: 2
   spawnPos: {fileID: 3017780049255676695}
 --- !u!54 &3959377140880551798
@@ -166,9 +166,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1128295319030913657}
     m_Modifications:
-    - target: {fileID: 100010, guid: ead20bad07c1a1d46ab7d4cccff9d055, type: 3}
-      propertyPath: m_Name
-      value: turret (1)
+    - target: {fileID: 400000, guid: ead20bad07c1a1d46ab7d4cccff9d055, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: ead20bad07c1a1d46ab7d4cccff9d055, type: 3}
       propertyPath: m_LocalPosition.x
@@ -226,15 +226,19 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 35.434517
       objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: ead20bad07c1a1d46ab7d4cccff9d055, type: 3}
+      propertyPath: m_Name
+      value: turret (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 2300010, guid: ead20bad07c1a1d46ab7d4cccff9d055, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c94ff2c26ba020143966cad226bcac1c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ead20bad07c1a1d46ab7d4cccff9d055, type: 3}
---- !u!4 &1880470859821529396 stripped
+--- !u!4 &1880470859821529406 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 400010, guid: ead20bad07c1a1d46ab7d4cccff9d055,
+  m_CorrespondingSourceObject: {fileID: 400000, guid: ead20bad07c1a1d46ab7d4cccff9d055,
     type: 3}
   m_PrefabInstance: {fileID: 1880470859821654974}
   m_PrefabAsset: {fileID: 0}
@@ -305,6 +309,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2300002, guid: f8bf755640c238340bda3837e0e93903, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c2ade7f04e860fe4883126316255e21c, type: 2}
     - target: {fileID: 2300000, guid: f8bf755640c238340bda3837e0e93903, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -313,25 +321,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 094baf2e29509124ebf3fd81b6ae1d24, type: 2}
-    - target: {fileID: 2300002, guid: f8bf755640c238340bda3837e0e93903, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: c2ade7f04e860fe4883126316255e21c, type: 2}
     - target: {fileID: 2300004, guid: f8bf755640c238340bda3837e0e93903, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 094baf2e29509124ebf3fd81b6ae1d24, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8bf755640c238340bda3837e0e93903, type: 3}
---- !u!4 &3205240322281170503 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: f8bf755640c238340bda3837e0e93903,
+--- !u!1 &3205240322281208423 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: f8bf755640c238340bda3837e0e93903,
     type: 3}
   m_PrefabInstance: {fileID: 3205240322281307335}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3205240322281208433 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100022, guid: f8bf755640c238340bda3837e0e93903,
+--- !u!4 &3205240322281170503 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: f8bf755640c238340bda3837e0e93903,
     type: 3}
   m_PrefabInstance: {fileID: 3205240322281307335}
   m_PrefabAsset: {fileID: 0}
