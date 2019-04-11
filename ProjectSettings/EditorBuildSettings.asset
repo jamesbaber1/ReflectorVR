@@ -11,4 +11,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ProjectAssets/Scenes/mainScene.unity
     guid: 02074320fde784341a5406959fc212cd
+  - enabled: 1
+    path: Assets/ProjectAssets/Scenes/startScene.unity
+    guid: 5a9ed8a129a904282b4222d1847c81d5
+  - enabled: 1
+    path: Assets/ProjectAssets/Scenes/instructionScene.unity
+    guid: 2301390ce98b64a77998fa414a9b7e44
+  - enabled: 1
+    path: Assets/ProjectAssets/Scenes/lvl2Scene.unity
+    guid: 43d26dfa4f0b34fcdb7dd38b4cba6308
+  - enabled: 1
+    path: Assets/ProjectAssets/Scenes/lvl3Scene.unity
+    guid: 2b28ae55be3d54a9e9d48a60387c7cda
+  - enabled: 1
+    path: Assets/ProjectAssets/Scenes/killedScene.unity
+    guid: 4bb7afe935fbd4d4e8f63250d18ef028
   m_configObjects: {}
