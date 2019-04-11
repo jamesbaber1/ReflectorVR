@@ -8,8 +8,11 @@ public class Enemy : MonoBehaviour
 
     public GameObject lazer;
     public float minLazerCooldown;
+    public GameObject manager;
+    public static int enemiesKilled = 0;
 
     private bool isActive = false;
+    private bool isDead = false;
     //public GameObject light;
     //private Material mat;
     public float lazerCooldown;
@@ -65,6 +68,11 @@ public class Enemy : MonoBehaviour
         return isActive;
     }
 
+    public bool getDead()
+    {
+        return isDead;
+    }
+
     public void SetLazerCooldown(float f)
     {
         if (f >= /*0.25f*/minLazerCooldown)
@@ -93,9 +101,17 @@ public class Enemy : MonoBehaviour
         if (other.gameObject.CompareTag("Lazer") == true)
         {
             Debug.Log("Enemy and lazer are colliding");
-            isActive = false;
             //mat.color = Color.red;
             Destroy(other.gameObject);
+            if(isActive == true)
+            {
+                Debug.Log("ENEMY KILLED");
+                enemiesKilled++;
+                gameObject.SetActive(false);
+                isDead = true;
+                isActive = false;
+            }
+            
         }
     }
 }

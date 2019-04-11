@@ -13,7 +13,10 @@ public class TurretManager : MonoBehaviour
     public float decreaseLazerCooldown;
     public float increaseLazerSpeed;
     public GameObject player;
+    public static int maxEnemiesToWin = 8;
+    public static bool callElevator = false;
 
+    private bool elevatorCalled = false;
     private int turretIterator = 0;
     private float cooldownFrames = 300;
     private List<GameObject> turrets;
@@ -31,7 +34,6 @@ public class TurretManager : MonoBehaviour
             Vector3 position = new Vector3(transform.position.x + radius * Mathf.Cos(Mathf.Deg2Rad * angle), transform.position.y, transform.position.z + radius * Mathf.Sin(Mathf.Deg2Rad * angle));
             Quaternion rot = Quaternion.AngleAxis(-angle - 90, Vector3.up);
             GameObject o = Instantiate(turretPrefab, position, rot);
-            //o.transform.LookAt(player.transform);
             turrets.Add(o);
             angle += (360 / numberOfTurrets);
             iterations++;
@@ -42,50 +44,82 @@ public class TurretManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (findTurret == true)
+        Debug.Log("Enemies killed: " + Enemy.enemiesKilled);
+        Debug.Log("Turrets list size: " + turrets.Count);
+        if (Enemy.enemiesKilled >= maxEnemiesToWin)
         {
-            if (turrets[turretIterator].GetComponent<Enemy>().getActive() == false)
+            Debug.Log("YOU WON THE GAME! :D");
+            //Enemy.enemiesKilled = 0;
+            if(elevatorCalled == false)
             {
-                activateTurret(turretIterator);
-                findTurret = false;
+                callElevator = true;
             }
-            turretIterator++;
-            if (turretIterator >= numberOfTurrets)
-            {
-                turretIterator = 0;
-            }
+            elevatorCalled = true;  
         }
         else
         {
-            frames++;
-            if (frames >= cooldownFrames )/*&& turrets[turretIterator].GetComponent<TurretScript>().getActiveNum() < maxTurrets)*/
+            eraseDead();
+            if (findTurret == true)
             {
-                if (turretIterator >= numberOfTurrets)
+                Debug.Log("find turret is true");
+                Enemy turret = turrets[turretIterator].GetComponent<Enemy>();
+                int badCount = 0;
+                while ((turret.getActive() == true || !isInFOV(turret)) && badCount <= turrets.Count)
                 {
-                    turretIterator = 0;
+                    badCount++;
+                    Debug.Log("badCount: " + badCount);
+                    turretIterator++;
+                    if (turretIterator >= turrets.Count)
+                    {
+                        turretIterator = 0;
+                    }
+                    turret = turrets[turretIterator].GetComponent<Enemy>();
                 }
-                if (turrets[turretIterator].GetComponent<Enemy>().getActive() == false)
+                Debug.Log("final badCount: " + badCount);
+                if (badCount <= turrets.Count)
                 {
                     activateTurret(turretIterator);
-                    turretIterator++;
+                    findTurret = false;
                 }
-                else
+            }
+            else
+            {
+                frames++;
+                if (frames >= cooldownFrames)/*&& turrets[turretIterator].GetComponent<TurretScript>().getActiveNum() < maxTurrets)*/
                 {
                     findTurret = true;
-                }
-                frames = 0;
-                if (cooldownFrames > /*10*/ activationCooldown)
-                {
-                    cooldownFrames -= activationCooldown/*10*/;
-                    for (int i = 0; i < numberOfTurrets; i++)
+                    frames = 0;
+                    if (cooldownFrames > /*10*/ activationCooldown)
                     {
-                        GameObject o = turrets[i];
-                        Enemy t = o.GetComponent<Enemy>();
-                        t.SetLazerCooldown(t.GetLazerCooldown() - /*0.1f*/decreaseLazerCooldown);
-                        t.SetLazerSpeed(t.GetLazerSpeed() + /*.1f*/increaseLazerSpeed);
+                        cooldownFrames -= activationCooldown/*10*/;
+                        for (int i = 0; i < turrets.Count; i++)
+                        {
+                            GameObject o = turrets[i];
+                            Enemy t = o.GetComponent<Enemy>();
+                            ////////////////////////////////////////////t.SetLazerCooldown(t.GetLazerCooldown() - /*0.1f*/decreaseLazerCooldown);
+                            ////////////////////////////////////////////t.SetLazerSpeed(t.GetLazerSpeed() + /*.1f*/increaseLazerSpeed);
+                        }
                     }
-                }
 
+                }
+            }
+        }
+    }
+
+    void eraseDead()
+    {
+        for (int i = 0; i < turrets.Count; i++)
+        {
+            Enemy turret = turrets[i].GetComponent<Enemy>();
+            if (turret.getDead() == true)
+            {
+                turrets.Remove(turret.gameObject);
+                Destroy(turret.gameObject);
+                numberOfTurrets--;
+            }
+            if (turretIterator >= turrets.Count)
+            {
+                turretIterator = 0;
             }
         }
     }
@@ -124,10 +158,7 @@ public class TurretManager : MonoBehaviour
     {
         GameObject o = turrets[i];
         Enemy t = o.GetComponent<Enemy>();
-        if(isInFOV(t) == true)
-        {
-            t.setActive(true);
-        }
+        t.setActive(true);
     }
 
     void deactivateTurret(int i)
