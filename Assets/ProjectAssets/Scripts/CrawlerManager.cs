@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-
 using UnityEngine;
 
-public class TurretManager : MonoBehaviour
+public class CrawlerManager : MonoBehaviour
 {
     public GameObject turretPrefab;
     public float radius;
@@ -50,11 +49,11 @@ public class TurretManager : MonoBehaviour
         {
             Debug.Log("YOU WON THE GAME! :D");
             //Enemy.enemiesKilled = 0;
-            if(elevatorCalled == false)
+            if (elevatorCalled == false)
             {
                 callElevator = true;
             }
-            elevatorCalled = true;  
+            elevatorCalled = true;
         }
         else
         {

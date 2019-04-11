@@ -16,7 +16,7 @@ public class PlayerHealth : MonoBehaviour
     private GameObject[] lazers;
     private int health = 10;
     private int score = 0;
-    private int countDown = 15;
+    public int countDown = 2;
     private AudioSource woundedSound;
     private AudioSource DeathSound;
 
