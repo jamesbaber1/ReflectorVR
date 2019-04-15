@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/ProjectAssets/Scenes/EnemyTestScene.unity
+- path: Assets/ProjectAssets/Scenes/introScene.unity
   isLoaded: 1
   isActive: 1
