@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 111922838}
   - component: {fileID: 111922837}
   - component: {fileID: 111922836}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -639,7 +639,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1866038553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -859,7 +859,7 @@ PrefabInstance:
     - target: {fileID: 7046464220445302775, guid: 866a8957921eb544ea1640311bb658b4,
         type: 3}
       propertyPath: m_LayerMask.m_Bits
-      value: 1335
+      value: 4096
       objectReference: {fileID: 0}
     - target: {fileID: 7046464220445302775, guid: 866a8957921eb544ea1640311bb658b4,
         type: 3}
@@ -889,7 +889,7 @@ PrefabInstance:
     - target: {fileID: 8059980246568412589, guid: 8fcbd2f0bb53b0341b58d335833b8048,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8059980246568412591, guid: 8fcbd2f0bb53b0341b58d335833b8048,
         type: 3}
@@ -949,7 +949,12 @@ PrefabInstance:
     - target: {fileID: 8059980246568412590, guid: 8fcbd2f0bb53b0341b58d335833b8048,
         type: 3}
       propertyPath: numberOfTurrets
-      value: 8
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8059980246568412590, guid: 8fcbd2f0bb53b0341b58d335833b8048,
+        type: 3}
+      propertyPath: radius
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fcbd2f0bb53b0341b58d335833b8048, type: 3}

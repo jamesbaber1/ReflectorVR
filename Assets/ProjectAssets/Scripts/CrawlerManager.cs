@@ -43,11 +43,11 @@ public class CrawlerManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Debug.Log("Enemies killed: " + Enemy.enemiesKilled);
-        Debug.Log("Turrets list size: " + turrets.Count);
+        //Debug.Log("Enemies killed: " + Enemy.enemiesKilled);
+        //Debug.Log("Turrets list size: " + turrets.Count);
         if (Enemy.enemiesKilled >= maxEnemiesToWin)
         {
-            Debug.Log("YOU WON THE GAME! :D");
+            //Debug.Log("YOU WON THE GAME! :D");
             //Enemy.enemiesKilled = 0;
             if (elevatorCalled == false)
             {
@@ -60,13 +60,13 @@ public class CrawlerManager : MonoBehaviour
             eraseDead();
             if (findTurret == true)
             {
-                Debug.Log("find turret is true");
+                //Debug.Log("find turret is true");
                 Enemy turret = turrets[turretIterator].GetComponent<Enemy>();
                 int badCount = 0;
                 while ((turret.getActive() == true || !isInFOV(turret)) && badCount <= turrets.Count)
                 {
                     badCount++;
-                    Debug.Log("badCount: " + badCount);
+                    //Debug.Log("badCount: " + badCount);
                     turretIterator++;
                     if (turretIterator >= turrets.Count)
                     {
@@ -74,7 +74,7 @@ public class CrawlerManager : MonoBehaviour
                     }
                     turret = turrets[turretIterator].GetComponent<Enemy>();
                 }
-                Debug.Log("final badCount: " + badCount);
+                //Debug.Log("final badCount: " + badCount);
                 if (badCount <= turrets.Count)
                 {
                     activateTurret(turretIterator);
@@ -139,12 +139,12 @@ public class CrawlerManager : MonoBehaviour
 
     public bool isInFOV(Enemy e)
     {
-        Debug.Log("Camera Forward: " + Camera.main.transform.forward);
-        Debug.Log("Enemy Forward: " + e.gameObject.transform.forward);
-        Debug.Log("Dot product: " + Vector3.Dot(e.gameObject.transform.forward, Camera.main.transform.forward));
+        //Debug.Log("Camera Forward: " + Camera.main.transform.forward);
+        //Debug.Log("Enemy Forward: " + e.gameObject.transform.forward);
+        //Debug.Log("Dot product: " + Vector3.Dot(e.gameObject.transform.forward, Camera.main.transform.forward));
         if (Vector3.Dot(e.gameObject.transform.forward, Camera.main.transform.forward) <= 0)
         {
-            Debug.Log("This enemy is within the camera's field of view!");
+            //Debug.Log("This enemy is within the camera's field of view!");
             return true;
         }
         else

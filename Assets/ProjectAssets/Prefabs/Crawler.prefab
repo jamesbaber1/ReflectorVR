@@ -142,6 +142,7 @@ MonoBehaviour:
   lazerCooldown: 2
   spawnPos: {fileID: 452737348778608447}
   player: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+  player: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
   radius: 0
 --- !u!195 &948769258
 NavMeshAgent:
@@ -153,7 +154,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: -1372625422
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 0.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

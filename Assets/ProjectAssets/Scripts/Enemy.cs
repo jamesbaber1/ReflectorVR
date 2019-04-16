@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     //private Material mat;
     public float lazerCooldown;
     public GameObject spawnPos;
+    //public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
