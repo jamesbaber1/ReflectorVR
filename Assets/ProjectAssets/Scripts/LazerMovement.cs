@@ -67,7 +67,7 @@ public class LazerMovement : MonoBehaviour
             toPlayer = (initialPos - transform.position).normalized;
             transform.rotation = Quaternion.LookRotation(toPlayer);
 
-            playerInfo.increaseScore();
+            //playerInfo.increaseScore();
 
             hitShieldSound.clip = hitShield;
             hitShieldSound.Play();

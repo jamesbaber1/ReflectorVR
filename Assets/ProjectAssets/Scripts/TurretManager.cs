@@ -8,13 +8,13 @@ public class TurretManager : MonoBehaviour
     public GameObject turretPrefab;
     public float radius;
     public float numberOfTurrets;
-    public int maxTurrets;
+    //public int maxTurrets;
     public float activationCooldown;
     public float decreaseLazerCooldown;
     public float increaseLazerSpeed;
     public GameObject player;
-    public static int maxEnemiesToWin = 8;
-    public static bool callElevator = false;
+    public static int maxEnemiesToWin;
+    //public static bool callElevator = false;
 
     private bool elevatorCalled = false;
     private int turretIterator = 0;
@@ -26,6 +26,8 @@ public class TurretManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        maxEnemiesToWin = 8;
+        Enemy.enemiesKilled = 0;
         turrets = new List<GameObject>();
         float angle = 0;
         int iterations = 0;
@@ -52,7 +54,8 @@ public class TurretManager : MonoBehaviour
             //Enemy.enemiesKilled = 0;
             if(elevatorCalled == false)
             {
-                callElevator = true;
+                MoveUp.maxVal = 21.5f;
+                MoveUp.callElevator = true;
             }
             elevatorCalled = true;  
         }

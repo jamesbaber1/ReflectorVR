@@ -6,9 +6,10 @@ public class MoveUp : MonoBehaviour
 {
 
     public float moveUpVal = 0.025f;
-    public float maxVal = 100;
+    public static float maxVal = 0;
     //public float minVal = -1;
     public bool movingUp = false;
+    public static bool callElevator = false;
 
     private Rigidbody rb;
     // Start is called before the first frame update
@@ -20,7 +21,7 @@ public class MoveUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(TurretManager.callElevator == true)
+        if(callElevator == true)
         {
             movingUp = true;
         }
@@ -30,7 +31,7 @@ public class MoveUp : MonoBehaviour
             if(gameObject.transform.position.y >= maxVal)
             {
                 movingUp = false;
-                TurretManager.callElevator = false;
+                callElevator = false;
             }
         }
         /*

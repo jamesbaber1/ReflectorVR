@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f679fd651fbdbc04f851a24bd2645e43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turretPrefab: {fileID: 2408846513636101285, guid: f0cebb7630e33544f861570016a5f8ba,
+  turretPrefab: {fileID: 104647600880992000, guid: f0cebb7630e33544f861570016a5f8ba,
     type: 3}
   radius: 10
   numberOfTurrets: 1

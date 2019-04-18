@@ -10,7 +10,7 @@ public class TurretScript : Enemy
     //public GameObject lazer;
     //public float minLazerCooldown;
 
-    private bool isActive = false;
+    //private bool isActive = false;
     //public GameObject light;
     //private Material mat;
     //public float lazerCooldown;

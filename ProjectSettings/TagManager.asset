@@ -10,6 +10,9 @@ TagManager:
   - projectile
   - turret
   - Crawler
+  - FirstManager
+  - SecondManager
+  - ThirdManager
   layers:
   - Default
   - TransparentFX

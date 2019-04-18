@@ -66,6 +66,7 @@
     <Compile Include="Assets\ProjectAssets\Scripts\FlyingEnemy.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\FlyingManager.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\LazerMovement.cs" />
+    <Compile Include="Assets\ProjectAssets\Scripts\ManagerCollider.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\MoveUp.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\MovingEnemy.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\PistolScript.cs" />
