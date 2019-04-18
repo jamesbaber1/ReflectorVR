@@ -44,11 +44,11 @@ Material:
     - _HitTime: 0
     - _IntersectIntensity: 0.485
     - _Opacity: 0.417
-    - _ShieldAnimSpeed: -1.5
-    - _ShieldDistortion: 0.0296
-    - _ShieldPatternPower: 12.2
-    - _ShieldPatternSize: 2
-    - _ShieldRimPower: 1.77
+    - _ShieldAnimSpeed: -1.1
+    - _ShieldDistortion: 0.0119
+    - _ShieldPatternPower: 34.2
+    - _ShieldPatternSize: 5
+    - _ShieldRimPower: 4.79
     - __dirty: 0
     m_Colors:
     - _Color: {r: 0, g: 0, b: 0, a: 0}
