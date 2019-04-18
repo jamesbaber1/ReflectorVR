@@ -21,7 +21,7 @@ public class CrawlerManager : MonoBehaviour
     private List<GameObject> turrets;
     private float frames = 0;
     private bool findTurret = false;
-    private int maxRounds = 5;
+    private int maxRounds = 2;
     private int round = 0;
     //private bool deactivated = false;
 

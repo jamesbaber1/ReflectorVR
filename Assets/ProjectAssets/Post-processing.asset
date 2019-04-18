@@ -61,10 +61,10 @@ MonoBehaviour:
     value: 1
   filtering:
     overrideState: 1
-    value: {x: 33.51876, y: 95}
+    value: {x: 29.976593, y: 95}
   minLuminance:
     overrideState: 1
-    value: -1.4
+    value: -1.1
   maxLuminance:
     overrideState: 1
     value: 9
@@ -98,7 +98,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 60.79
+    value: 50
   threshold:
     overrideState: 1
     value: 1.2
@@ -106,8 +106,8 @@ MonoBehaviour:
     overrideState: 0
     value: 0.5
   clamp:
-    overrideState: 0
-    value: 65472
+    overrideState: 1
+    value: 6650
   diffusion:
     overrideState: 0
     value: 7
@@ -116,7 +116,7 @@ MonoBehaviour:
     value: 0
   color:
     overrideState: 1
-    value: {r: 1, g: 1, b: 1, a: 1}
+    value: {r: 1.035265, g: 1.035265, b: 1.035265, a: 1}
   fastMode:
     overrideState: 0
     value: 0
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1cb7e9e120078f43bce4f0b1be547a7, type: 3}
   m_Name: AmbientOcclusion
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
