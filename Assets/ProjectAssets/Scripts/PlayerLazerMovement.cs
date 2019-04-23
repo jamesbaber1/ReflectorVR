@@ -2,23 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerLazerMovement : LazerMovement
+public class PlayerLazerMovement : MonoBehaviour
 {
-    public float speed = 1000.0f;
+    public float destroyTime = 3.0f;
+    public float speed = 150.0f;
+    //public float range = 50;
     AudioSource hitShieldSound;
-    // Start is called before the first frame update
-    /*
+    //private Vector3 target;//Just reallly far forward
     void Start()
     {
-        //Destroy(gameObject, 0.3f);
-        //col = GetComponent<Collider>();
-        hitShieldSound = GetComponent<AudioSource>();
-        GetComponent<Rigidbody>().AddForce(transform.forward * speed);
+        //target = transform.position + (range*transform.forward);
+        Destroy(gameObject, destroyTime);
+        //hitShieldSound = GetComponent<AudioSource>();
+        //GetComponent<Rigidbody>().AddForce(transform.forward * speed);
+        //gameObject.GetComponent<Rigidbody>().velocity = speed*transform.forward;
     }
-    */
-    void Update()
+
+    void FixedUpdate()
     {
-        hitShieldSound = GetComponent<AudioSource>();
-        gameObject.transform.position = transform.forward * speed;
+        //transform.position += (target) / (1 / (speed / 25));
+        transform.position += (speed*transform.forward) / 1000;
+        //print("Should be moveing");
+
     }
 }

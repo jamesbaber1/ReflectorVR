@@ -42,7 +42,7 @@ public class LazerMovement : MonoBehaviour
 
         if (laserDistance < 0.05f)
         {
-            ////////////////////////////////////////////////playerInfo.decreaseHealth();
+           playerInfo.decreaseHealth();
         }
     }
 

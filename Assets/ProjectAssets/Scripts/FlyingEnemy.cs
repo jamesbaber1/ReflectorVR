@@ -21,7 +21,7 @@ public class FlyingEnemy : MovingEnemy
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.LookAt(player.transform);
+        gameObject.transform.LookAt(player.transform.position);
         frameNum++;
         if (frameNum % 60 == 0)
         {

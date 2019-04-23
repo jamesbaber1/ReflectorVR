@@ -219,7 +219,6 @@
     <Compile Include="Assets\Tools\SteamVR\Scripts\SteamVR_Fade.cs" />
     <Compile Include="Assets\Tools\SteamVR\Scripts\SteamVR_Frustum.cs" />
     <Compile Include="Assets\Tools\SteamVR\Scripts\SteamVR_IK.cs" />
-    <Compile Include="Assets\Tools\SteamVR\Scripts\SteamVR_LoadLevel.cs" />
     <Compile Include="Assets\Tools\SteamVR\Scripts\SteamVR_Menu.cs" />
     <Compile Include="Assets\Tools\SteamVR\Scripts\SteamVR_Overlay.cs" />
     <Compile Include="Assets\Tools\SteamVR\Scripts\SteamVR_PlayArea.cs" />

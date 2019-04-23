@@ -26,14 +26,14 @@ public class FlyingManager : MonoBehaviour
     void Start()
     {
         Enemy.enemiesKilled = 0;
-        maxEnemiesToWin = 8;
+        maxEnemiesToWin = 16;
         turrets = new List<GameObject>();
         float angle = 0;
         int iterations = 0;
         while (iterations < numberOfTurrets)
         {
             Vector3 position = new Vector3(transform.position.x + radius * Mathf.Cos(Mathf.Deg2Rad * angle), transform.position.y, transform.position.z + radius * Mathf.Sin(Mathf.Deg2Rad * angle));
-            Quaternion rot = Quaternion.AngleAxis(-angle - 90, Vector3.up);
+            Quaternion rot = Quaternion.LookRotation(player.transform.position - gameObject.transform.position, Vector3.up);//Quaternion.AngleAxis(-angle - 90, Vector3.up);
             GameObject o = Instantiate(turretPrefab, position, rot);
             turrets.Add(o);
             angle += (360 / numberOfTurrets);
