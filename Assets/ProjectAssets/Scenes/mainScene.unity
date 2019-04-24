@@ -1299,6 +1299,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1794483512}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &535400987 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 9166977025941799488, guid: 8296df6ed06c6114bb024dfda78f3f79,
+    type: 3}
+  m_PrefabInstance: {fileID: 698891490}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &535797689
 GameObject:
   m_ObjectHideFlags: 0
@@ -2250,7 +2256,7 @@ PrefabInstance:
     - target: {fileID: 9166977025941799503, guid: 8296df6ed06c6114bb024dfda78f3f79,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7
+      value: 1.558
       objectReference: {fileID: 0}
     - target: {fileID: 9166977025941799503, guid: 8296df6ed06c6114bb024dfda78f3f79,
         type: 3}
@@ -2312,6 +2318,11 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9166977025941799488, guid: 8296df6ed06c6114bb024dfda78f3f79,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9166977025941799498, guid: 8296df6ed06c6114bb024dfda78f3f79,
         type: 3}
       propertyPath: lHand
@@ -2322,6 +2333,42 @@ PrefabInstance:
       propertyPath: rHand
       value: 
       objectReference: {fileID: 676133989}
+    - target: {fileID: 9166977025941799498, guid: 8296df6ed06c6114bb024dfda78f3f79,
+        type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 535400987}
+    - target: {fileID: 9166977025941799489, guid: 8296df6ed06c6114bb024dfda78f3f79,
+        type: 3}
+      propertyPath: hideHandOnAttach
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9166977025941799489, guid: 8296df6ed06c6114bb024dfda78f3f79,
+        type: 3}
+      propertyPath: hideSkeletonOnAttach
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9166977025941799489, guid: 8296df6ed06c6114bb024dfda78f3f79,
+        type: 3}
+      propertyPath: hideControllerOnAttach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9166977025941799489, guid: 8296df6ed06c6114bb024dfda78f3f79,
+        type: 3}
+      propertyPath: attachEaseIn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9166977025941799490, guid: 8296df6ed06c6114bb024dfda78f3f79,
+        type: 3}
+      propertyPath: skeletonMainPose
+      value: 
+      objectReference: {fileID: 11400000, guid: 2cc2b3b9f3b6b69439836e7b305dd8fd,
+        type: 2}
+    - target: {fileID: 9166977025941799490, guid: 8296df6ed06c6114bb024dfda78f3f79,
+        type: 3}
+      propertyPath: poseNames.Array.data[0]
+      value: '[not set]'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8296df6ed06c6114bb024dfda78f3f79, type: 3}
 --- !u!1001 &712495919
@@ -2495,6 +2542,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e2d3a4d723cf1dc4eab1d919f3324dbc, type: 2}
+    - target: {fileID: 8422195461764054567, guid: 8ae4673c9d399d04d8c7fd21a1215686,
+        type: 3}
+      propertyPath: lHand
+      value: 
+      objectReference: {fileID: 113880415}
+    - target: {fileID: 8422195461764054567, guid: 8ae4673c9d399d04d8c7fd21a1215686,
+        type: 3}
+      propertyPath: rHand
+      value: 
+      objectReference: {fileID: 676133989}
+    - target: {fileID: 8422195461764054567, guid: 8ae4673c9d399d04d8c7fd21a1215686,
+        type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1592518036}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ae4673c9d399d04d8c7fd21a1215686, type: 3}
 --- !u!1 &720330320
@@ -12694,6 +12756,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65d89e05a4ea33b4c86a2ddf56021132, type: 3}
+--- !u!54 &1592518036 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 8422195461764054564, guid: 8ae4673c9d399d04d8c7fd21a1215686,
+    type: 3}
+  m_PrefabInstance: {fileID: 712618502}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1615759797
 GameObject:
   m_ObjectHideFlags: 0
@@ -13691,6 +13759,10 @@ PrefabInstance:
       propertyPath: m_ForceIntoRT
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 13693334, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114000011273627542, guid: dc06161b6d97feb419f45f03b62e14b9,
         type: 3}
       propertyPath: broadcastDeviceChanges
@@ -13715,10 +13787,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1000013281422588, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 13693334, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5475726, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}

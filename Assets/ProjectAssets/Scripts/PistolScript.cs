@@ -14,16 +14,37 @@ public class PistolScript : MonoBehaviour
     public float pulseSeconds = 0.1f;
     public float pulseAmplitude = 50;
     public float pulseFrequency = 50;
+    bool firstTimeGrabbed = false;
+    public Rigidbody rb;
 
-    void Update()
+    void Start()
     {
-        if(SteamVR_Actions._default.GrabPinch.GetStateDown(SteamVR_Input_Sources.LeftHand) && lHand.currentAttachedObject == gameObject)
+        rb = gameObject.GetComponent<Rigidbody>();
+        //rb.useGravity = false;
+        //rb.isKinematic = true;
+        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
+    }
+
+
+     void Update()
+    {
+
+        if ((SteamVR_Actions._default.GrabGrip.GetState(SteamVR_Input_Sources.LeftHand) && lHand.currentAttachedObject == gameObject) || (SteamVR_Actions._default.GrabGrip.GetState(SteamVR_Input_Sources.RightHand) && rHand.currentAttachedObject == gameObject))
+        {
+            if (firstTimeGrabbed == false)
+            {
+                rb.constraints = RigidbodyConstraints.None;
+            }
+        }
+
+        if (SteamVR_Actions._default.GrabPinch.GetStateDown(SteamVR_Input_Sources.LeftHand) && lHand.currentAttachedObject == gameObject)
         {
             if (readyToFire)
             {
                 fire();
                 lHand.TriggerHapticPulse(pulseSeconds, pulseFrequency, pulseAmplitude);
             }
+
         }
         if (SteamVR_Actions._default.GrabPinch.GetStateDown(SteamVR_Input_Sources.RightHand) && rHand.currentAttachedObject == gameObject)
         {

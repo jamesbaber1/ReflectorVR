@@ -1,21 +1,40 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
+using Valve.VR.InteractionSystem;
 
 public class ShieldScript : MonoBehaviour
 {
 
     float rotateBy = 5f;
     float rotateY;
+
+    public Hand lHand = null;
+    public Hand rHand = null;
+    bool firstTimeGrabbed = false;
+    public Rigidbody rb;
+
     // Start is called before the first frame update
     void Start()
     {
         rotateY = transform.rotation.y;
+
+        rb = gameObject.GetComponent<Rigidbody>();
+        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if ((SteamVR_Actions._default.GrabGrip.GetState(SteamVR_Input_Sources.LeftHand) && lHand.currentAttachedObject == gameObject) || (SteamVR_Actions._default.GrabGrip.GetState(SteamVR_Input_Sources.RightHand) && rHand.currentAttachedObject == gameObject))
+        {
+            if (firstTimeGrabbed == false)
+            {
+                rb.constraints = RigidbodyConstraints.None;
+            }
+        }
         /*
         if (Input.GetKey(KeyCode.A))
         {
