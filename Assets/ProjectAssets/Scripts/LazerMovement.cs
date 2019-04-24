@@ -8,6 +8,7 @@ public class LazerMovement : MonoBehaviour
     public float speed;
     public float maxSpeed;
     public AudioClip hitShield;
+    public Material mat;
 
     private GameObject Player;
     private GameObject target;
@@ -38,12 +39,14 @@ public class LazerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         laserDistance = Vector3.Distance(target.transform.position, this.transform.position);
 
         if (laserDistance < 0.05f)
         {
            playerInfo.decreaseHealth();
         }
+        */
     }
 
     void FixedUpdate()
@@ -71,13 +74,20 @@ public class LazerMovement : MonoBehaviour
 
             hitShieldSound.clip = hitShield;
             hitShieldSound.Play();
+            MeshRenderer r = this.gameObject.GetComponent<MeshRenderer>();
+            r.material = mat;
+            //r.material.shader = Shader.Find("_Color");
+            //r.material.SetColor("_Color", new Color(0.09019607f, 0.9372549f, 0.8509804f));
             //get unit normal of sheild and seet the toPlayer equal to that
             //also reset the rotation or call a function that rotates the object over time
         }
+        if (other.gameObject.CompareTag("Player") == true)
+        {
+            Debug.Log("Lazer collided with player");
+            playerInfo.decreaseHealth();
+        }
 
-
-
-    }
+        }
 
     void EnableCollision()
     {

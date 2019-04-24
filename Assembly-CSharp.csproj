@@ -76,6 +76,7 @@
     <Compile Include="Assets\ProjectAssets\Scripts\ShieldScript.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\SteamVR_LoadLevel.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\TestNav.cs" />
+    <Compile Include="Assets\ProjectAssets\Scripts\ThrowableArea.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\TurretManager.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\TurretScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />

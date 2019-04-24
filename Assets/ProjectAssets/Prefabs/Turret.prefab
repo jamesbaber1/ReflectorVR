@@ -109,6 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lazer: {fileID: 121151846650727232, guid: 34362e74452ece04ebe03ae000686838, type: 3}
   minLazerCooldown: 0.5
+  manager: {fileID: 0}
   lazerCooldown: 2
   spawnPos: {fileID: 3017780049255676695}
 --- !u!54 &3959377140880551798

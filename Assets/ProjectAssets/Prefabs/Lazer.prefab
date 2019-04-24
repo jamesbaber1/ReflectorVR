@@ -96,6 +96,7 @@ MonoBehaviour:
   speed: 2
   maxSpeed: 5
   hitShield: {fileID: 8300000, guid: 641fe1dcd405fd344a92403bf77d8628, type: 3}
+  mat: {fileID: 2100000, guid: 8a70b6c9b55d140448c669569df6725b, type: 2}
   toPlayer: {x: 0, y: 0, z: 0}
 --- !u!54 &6138789593413921857
 Rigidbody:
