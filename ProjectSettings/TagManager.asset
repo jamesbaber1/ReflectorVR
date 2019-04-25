@@ -14,6 +14,7 @@ TagManager:
   - SecondManager
   - ThirdManager
   - Pistol
+  - NullifyLazer
   layers:
   - Default
   - TransparentFX

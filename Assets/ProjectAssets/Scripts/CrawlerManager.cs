@@ -122,8 +122,8 @@ public class CrawlerManager : MonoBehaviour
                         {
                             GameObject o = turrets[i];
                             Enemy t = o.GetComponent<Enemy>();
-                            ////////////////////////////////////////////t.SetLazerCooldown(t.GetLazerCooldown() - /*0.1f*/decreaseLazerCooldown);
-                            ////////////////////////////////////////////t.SetLazerSpeed(t.GetLazerSpeed() + /*.1f*/increaseLazerSpeed);
+                            t.SetLazerCooldown(t.GetLazerCooldown() - /*0.1f*/decreaseLazerCooldown);
+                            t.SetLazerSpeed(t.GetLazerSpeed() + /*.1f*/increaseLazerSpeed);
                         }
                     }
 

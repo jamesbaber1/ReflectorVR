@@ -8,34 +8,58 @@ public class PlayerHealth : MonoBehaviour
     public TextMeshPro hText;
     public TextMeshPro sText;
     public TextMeshPro instructionText;
-    public GameObject TurretManager;
+    //public GameObject TurretManager;
     public AudioClip death;
-
+    public static int health = 10;
+    public GameObject floor_manager;
 
     private GameObject[] turrets;
     private GameObject[] lazers;
-    private int health = 10;
     private int score = 0;
-    public int countDown = 2;
+    private int countDown = 5;
     private AudioSource woundedSound;
     private AudioSource DeathSound;
+
+    private int enemy_tracker;
+    private int initial_health = 10;
 
 
 
     private void Start()
     {
-        instructionText.text = "Grab this Shield.";
-        InvokeRepeating("InstructionCountDown", 5f, 1f);
+        instructionText.text = "PREPARE YOURSELF\n\nGRAB THIS SHIELD";
+        InvokeRepeating("InstructionCountDown", 10f, 1f);
         woundedSound = GetComponent<AudioSource>();
         DeathSound = GetComponent<AudioSource>();
+        enemy_tracker = Enemy.enemiesKilled;
     }
 
     void Update()
     {
+        if(Enemy.enemiesKilled != enemy_tracker)
+        {
+            enemy_tracker = Enemy.enemiesKilled;
+            setScore();
+        }
+        if(health != initial_health)
+        {
+            initial_health = health;
+            setHealth();
+        }
         if(health <= 0)
         {
-            TurretManager.SetActive(false);
+            //TurretManager.SetActive(false);
             hText.text = "You were killed!";
+
+            GameObject man1 = GameObject.FindGameObjectWithTag("FirstManager");
+            GameObject man2 = GameObject.FindGameObjectWithTag("FirstManager");
+            GameObject man3 = GameObject.FindGameObjectWithTag("FirstManager");
+
+            floor_manager.SetActive(false);
+
+            man1.SetActive(false);
+            man2.SetActive(false);
+            man3.SetActive(false);
 
             turrets = GameObject.FindGameObjectsWithTag("turret");
             lazers = GameObject.FindGameObjectsWithTag("Lazer");
@@ -49,27 +73,26 @@ public class PlayerHealth : MonoBehaviour
             {
                 lazer.SetActive(false);
             }
-
         }
-
     }
 
 
 
 
-    public void decreaseHealth()
+    public void setHealth()
     {
+        //Debug.Log("DECREASING HEALTH");
         woundedSound.Play();
-        health--;
         hText.text = "Health " + health;
-        Debug.Log("Health " + health);
+        //Debug.Log("Health " + health);
     }
 
-    public void increaseScore()
+    public void setScore()
     {
+        //Debug.Log("INCREASING SCORE");
         score++;
         sText.text = "Score " + score;
-        Debug.Log("Score " + score);
+        //Debug.Log("Score " + score);
     }
 
     private void InstructionCountDown()
@@ -82,8 +105,18 @@ public class PlayerHealth : MonoBehaviour
         }
         else if(countDown == 0)
         {
-            TurretManager.SetActive(true);
+            floor_manager.SetActive(true);
             instructionText.text = "";
+        }
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+
+        if(collision.gameObject.CompareTag("Lazer") == true)
+        {
+            Debug.Log("PLAYER collided with lazer");
+            health--;
         }
     }
 

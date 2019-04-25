@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\ProjectAssets\Scripts\CrawlerManager.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\CrawlingEnemy.cs" />
+    <Compile Include="Assets\ProjectAssets\Scripts\DeactivateLazers.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\Enemy.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\FlyingEnemy.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\FlyingManager.cs" />

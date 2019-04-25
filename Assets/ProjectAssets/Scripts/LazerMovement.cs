@@ -81,10 +81,17 @@ public class LazerMovement : MonoBehaviour
             //get unit normal of sheild and seet the toPlayer equal to that
             //also reset the rotation or call a function that rotates the object over time
         }
+        Debug.Log("in lazer movement collide (name) : " + other.collider.gameObject.name);
+        if (other.gameObject.CompareTag("NullifyArea") == true)
+        {
+            
+            Destroy(this.gameObject);
+        }
         if (other.gameObject.CompareTag("Player") == true)
         {
-            Debug.Log("Lazer collided with player");
-            playerInfo.decreaseHealth();
+            Debug.Log("LAZER collided with player");
+            //playerInfo.decreaseHealth();
+            PlayerHealth.health--;
         }
 
         }

@@ -112,6 +112,7 @@ MonoBehaviour:
   manager: {fileID: 0}
   lazerCooldown: 2
   spawnPos: {fileID: 3017780049255676695}
+  player: {fileID: 1845290972, guid: d570edab5474ee844af215753903448d, type: 3}
 --- !u!54 &3959377140880551798
 Rigidbody:
   m_ObjectHideFlags: 0
