@@ -60,6 +60,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ProjectAssets\Prefabs\FlameBot\Flame\flameBurst.cs" />
+    <Compile Include="Assets\ProjectAssets\Prefabs\FlameBot\Model\FlameBot.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\CrawlerManager.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\CrawlingEnemy.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\DeactivateLazers.cs" />

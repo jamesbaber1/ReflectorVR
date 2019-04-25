@@ -42,7 +42,7 @@ public class CrawlerManager : MonoBehaviour
             angle += (360 / numberOfTurrets);
             iterations++;
         }
-        SelectTurrets();
+        //SelectTurrets();
     }
 
     // Update is called once per frame
@@ -80,8 +80,9 @@ public class CrawlerManager : MonoBehaviour
                 iterations++;
             }
             Debug.Log(turrets.Count);
-            SelectTurrets();
+            //SelectTurrets();
         }
+        /*
         else
         {
             eraseDead();
@@ -90,7 +91,7 @@ public class CrawlerManager : MonoBehaviour
                 //Debug.Log("find turret is true");
                 Enemy turret = turrets[turretIterator].GetComponent<Enemy>();
                 int badCount = 0;
-                while ((turret.getActive() == true /*|| !isInFOV(turret)*/) && badCount <= turrets.Count)
+                while ((turret.getActive() == true ) && badCount <= turrets.Count)
                 {
                     badCount++;
                     //Debug.Log("badCount: " + badCount);
@@ -111,27 +112,29 @@ public class CrawlerManager : MonoBehaviour
             else
             {
                 frames++;
-                if (frames >= cooldownFrames)/*&& turrets[turretIterator].GetComponent<TurretScript>().getActiveNum() < maxTurrets)*/
+                if (frames >= cooldownFrames)/
                 {
                     findTurret = true;
                     frames = 0;
-                    if (cooldownFrames > /*10*/ activationCooldown)
+                    if (cooldownFrames >  activationCooldown)
                     {
-                        cooldownFrames -= activationCooldown/*10*/;
+                        cooldownFrames -= activationCooldown;
                         for (int i = 0; i < turrets.Count; i++)
                         {
                             GameObject o = turrets[i];
                             Enemy t = o.GetComponent<Enemy>();
-                            t.SetLazerCooldown(t.GetLazerCooldown() - /*0.1f*/decreaseLazerCooldown);
-                            t.SetLazerSpeed(t.GetLazerSpeed() + /*.1f*/increaseLazerSpeed);
+                            t.SetLazerCooldown(t.GetLazerCooldown() - decreaseLazerCooldown);
+                            t.SetLazerSpeed(t.GetLazerSpeed() + increaseLazerSpeed);
                         }
                     }
 
                 }
             }
         }
+        */
     }
-
+    
+    /*
     void eraseDead()
     {
         for (int i = 0; i < turrets.Count; i++)
@@ -164,23 +167,6 @@ public class CrawlerManager : MonoBehaviour
         turrets = turretOrder;
     }
 
-    /*
-    public bool isInFOV(Enemy e)
-    {
-        //Debug.Log("Camera Forward: " + Camera.main.transform.forward);
-        //Debug.Log("Enemy Forward: " + e.gameObject.transform.forward);
-        //Debug.Log("Dot product: " + Vector3.Dot(e.gameObject.transform.forward, Camera.main.transform.forward));
-        if (Vector3.Dot(e.gameObject.transform.forward, Camera.main.transform.forward) <= 0)
-        {
-            //Debug.Log("This enemy is within the camera's field of view!");
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-    */
 
     void activateTurret(int i)
     {
@@ -195,5 +181,5 @@ public class CrawlerManager : MonoBehaviour
         Enemy t = o.GetComponent<Enemy>();
         t.setActive(false);
     }
-
+    */
 }
