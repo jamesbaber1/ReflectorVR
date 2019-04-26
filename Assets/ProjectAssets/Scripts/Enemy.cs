@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     public float minLazerCooldown;
     public GameObject manager;
     public static int enemiesKilled = 0;
+    public int health = 1;
 
     private bool isActive = false;
     private bool isDead = false;
@@ -18,6 +19,7 @@ public class Enemy : MonoBehaviour
     public float lazerCooldown;
     public GameObject spawnPos;
     public GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -104,15 +106,19 @@ public class Enemy : MonoBehaviour
             Debug.Log("Enemy and lazer are colliding");
             //mat.color = Color.red;
             Destroy(other.gameObject);
-            //if(isActive == true)
-            //{
+            health--;
+
+            //matObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] { hitMat };
+            //Invoke("revertMaterial", 0.25f);
+
+            if (health <= 0)
+            {
                 Debug.Log("ENEMY KILLED");
-                enemiesKilled++;
+                Enemy.enemiesKilled++;
                 gameObject.SetActive(false);
-                isDead = true;
-                isActive = false;
-            //}
-            
+                Destroy(this.gameObject);
+            }
+
         }
     }
 }

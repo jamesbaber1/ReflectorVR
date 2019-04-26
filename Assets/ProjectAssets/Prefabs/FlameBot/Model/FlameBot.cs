@@ -14,6 +14,10 @@ public class FlameBot : MonoBehaviour
     private Animator Anim;
     private Quaternion rot;
 
+    public GameObject matObj;
+    public Material hitMat;
+    public Material origMat;
+
     private int health = 5;
     
     // Start is called before the first frame update
@@ -40,6 +44,11 @@ public class FlameBot : MonoBehaviour
         return Mathf.Max(Mathf.Max(v3.x, v3.y), v3.z);
     }
 
+    void revertMaterial()
+    {
+        matObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] { origMat };
+    }
+
     void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Lazer") == true)
@@ -50,7 +59,11 @@ public class FlameBot : MonoBehaviour
             //if (isActive == true)
             //{
             health--;
-            if(health <= 0)
+
+            matObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] { hitMat };
+            Invoke("revertMaterial", 0.25f);
+
+            if (health <= 0)
             {
                 Debug.Log("ENEMY KILLED");
                 Enemy.enemiesKilled++;
