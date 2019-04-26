@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerLazerMovement : MonoBehaviour
 {
-    public float destroyTime = 3.0f;
+    private float destroyTime = 7.0f;
     public float speed = 150.0f;
     //public float range = 50;
     AudioSource hitShieldSound;
@@ -21,7 +21,7 @@ public class PlayerLazerMovement : MonoBehaviour
     void FixedUpdate()
     {
         //transform.position += (target) / (1 / (speed / 25));
-        transform.position += (speed*transform.forward) / 1000;
+        transform.position += (speed * transform.forward) / 1000;
         //print("Should be moveing");
 
     }
@@ -36,4 +36,13 @@ public class PlayerLazerMovement : MonoBehaviour
         }
     }
     */
+    void OnCollisionEnter(Collision other)
+    {
+
+        if (other.gameObject.CompareTag("Shield") == true)
+        {
+            this.gameObject.SetActive(false);
+            //Destroy(this.gameObject);
+        }
+    }
 }

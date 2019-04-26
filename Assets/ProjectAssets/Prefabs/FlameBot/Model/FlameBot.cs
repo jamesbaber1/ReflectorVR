@@ -13,6 +13,8 @@ public class FlameBot : MonoBehaviour
     private NavMeshAgent flameBot;
     private Animator Anim;
     private Quaternion rot;
+
+    private int health = 5;
     
     // Start is called before the first frame update
     void Start()
@@ -36,5 +38,30 @@ public class FlameBot : MonoBehaviour
     float getMaxElement(Vector3 v3)
     {
         return Mathf.Max(Mathf.Max(v3.x, v3.y), v3.z);
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Lazer") == true)
+        {
+            Debug.Log("Enemy and lazer are colliding");
+            //mat.color = Color.red;
+            Destroy(other.gameObject);
+            //if (isActive == true)
+            //{
+            health--;
+            if(health <= 0)
+            {
+                Debug.Log("ENEMY KILLED");
+                Enemy.enemiesKilled++;
+                gameObject.SetActive(false);
+                Destroy(this.gameObject);
+            }
+                
+                //isDead = true;
+                //isActive = false;
+            //}
+
+        }
     }
 }

@@ -104,14 +104,14 @@ public class Enemy : MonoBehaviour
             Debug.Log("Enemy and lazer are colliding");
             //mat.color = Color.red;
             Destroy(other.gameObject);
-            if(isActive == true)
-            {
+            //if(isActive == true)
+            //{
                 Debug.Log("ENEMY KILLED");
                 enemiesKilled++;
                 gameObject.SetActive(false);
                 isDead = true;
                 isActive = false;
-            }
+            //}
             
         }
     }

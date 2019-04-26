@@ -18,7 +18,7 @@ public class TurretManager : MonoBehaviour
 
     private bool elevatorCalled = false;
     private int turretIterator = 0;
-    private float cooldownFrames = 300;
+    private float cooldownFrames = 180;
     private List<GameObject> turrets;
     private float frames = 0;
     private bool findTurret = false;

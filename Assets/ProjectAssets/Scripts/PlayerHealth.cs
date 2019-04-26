@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
     private void Start()
     {
         instructionText.text = "PREPARE YOURSELF\n\nGRAB THIS SHIELD";
-        InvokeRepeating("InstructionCountDown", 10f, 1f);
+        InvokeRepeating("InstructionCountDown", 1f, 1f);
         woundedSound = GetComponent<AudioSource>();
         DeathSound = GetComponent<AudioSource>();
         enemy_tracker = Enemy.enemiesKilled;
@@ -110,7 +110,13 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    public void OnCollisionEnter(Collision collision)
+    void OnParticleCollision(GameObject other)
+    {
+        Debug.Log("PLAYER collided with particles");
+        health--;
+    }
+
+        public void OnCollisionEnter(Collision collision)
     {
 
         if(collision.gameObject.CompareTag("Lazer") == true)

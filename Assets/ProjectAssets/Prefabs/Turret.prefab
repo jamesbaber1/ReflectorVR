@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1128295319030913657}
   - component: {fileID: 1128295319030913662}
   - component: {fileID: 1128295319030913663}
-  - component: {fileID: 1128295319030913660}
   - component: {fileID: 1128295319030913656}
   - component: {fileID: 3959377140880551798}
+  - component: {fileID: 7027206402071977102}
   m_Layer: 0
   m_Name: Turret
   m_TagString: turret
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128295319030913661}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 3}
+  m_LocalPosition: {x: 0, y: 0, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2215270800161558991}
@@ -82,19 +82,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1128295319030913660
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1128295319030913661}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.85817295, y: 1.4543378, z: 0.73496985}
-  m_Center: {x: 0.07091352, y: 0.7256774, z: 0.031551242}
 --- !u!114 &1128295319030913656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,6 +116,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!136 &7027206402071977102
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128295319030913661}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.35
+  m_Height: 1.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!1 &3017780049255676695
 GameObject:
   m_ObjectHideFlags: 0
