@@ -19,4 +19,9 @@ public class flameBurst : MonoBehaviour
         instantiatedFlame = (GameObject)Instantiate(flame, transform.position, transform.rotation);
         Destroy(instantiatedFlame, burstDuration);
     }
+
+    void OnDestroy()
+    {
+        CancelInvoke();
+    }
 }

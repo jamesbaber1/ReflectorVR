@@ -56,6 +56,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd72693c79e5630438cc986d5ce0bfe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathExplode: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,
+    type: 3}
+  hitExplode: {fileID: 1329845292236604, guid: 9bba9cf244c53c5439505dfc96fdd11c, type: 3}
   lazer: {fileID: 121151846650727232, guid: 34362e74452ece04ebe03ae000686838, type: 3}
   minLazerCooldown: 0.5
   manager: {fileID: 0}

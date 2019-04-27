@@ -57,7 +57,7 @@ public class TurretManager : MonoBehaviour
             //Enemy.enemiesKilled = 0;
             if (elevatorCalled == false)
             {
-                MoveUp.maxVal = 56;
+                MoveUp.maxVal = 21;
                 MoveUp.callElevator = true;
                 Enemy.enemiesKilled = 0;
             }

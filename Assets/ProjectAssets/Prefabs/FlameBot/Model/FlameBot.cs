@@ -6,7 +6,8 @@ using UnityEngine.AI;
 
 public class FlameBot : MonoBehaviour
 {
-
+    public GameObject hitExplode;
+    public GameObject deathExplode;
     public GameObject head;
     private GameObject moveTowards;
 
@@ -54,6 +55,10 @@ public class FlameBot : MonoBehaviour
         if (other.gameObject.CompareTag("Lazer") == true)
         {
             Debug.Log("Enemy and lazer are colliding");
+
+            Instantiate(hitExplode, other.contacts[0].point, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
+            Destroy(hitExplode, 4.0f);
+
             //mat.color = Color.red;
             Destroy(other.gameObject);
             //if (isActive == true)
@@ -66,6 +71,8 @@ public class FlameBot : MonoBehaviour
             if (health == 0)
             {
                 Debug.Log("ENEMY KILLED");
+                Instantiate(deathExplode, other.contacts[0].point, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
+                Destroy(deathExplode, 4.0f);
                 Enemy.enemiesKilled++;
                 gameObject.SetActive(false);
                 Destroy(this.gameObject);
@@ -78,3 +85,11 @@ public class FlameBot : MonoBehaviour
         }
     }
 }
+
+
+
+
+
+            
+
+                

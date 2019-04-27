@@ -400,6 +400,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b4993a4fac67c64592b8a2e21069a07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitExplode: {fileID: 1329845292236604, guid: 9bba9cf244c53c5439505dfc96fdd11c, type: 3}
+  deathExplode: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,
+    type: 3}
   head: {fileID: 616021796}
   matObj: {fileID: 756821412}
   hitMat: {fileID: 2100000, guid: abc0d4cc61c7bc04792bf1af51dfc9d0, type: 2}

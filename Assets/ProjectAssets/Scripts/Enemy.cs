@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour
 {
     protected static int activeNum;
 
+    public GameObject deathExplode;
+    public GameObject hitExplode;
     public GameObject lazer;
     public float minLazerCooldown;
     public GameObject manager;
@@ -117,13 +119,18 @@ public class Enemy : MonoBehaviour
             Destroy(other.gameObject);
             health--;
 
+
+            Instantiate(hitExplode, other.contacts[0].point, new Quaternion (0.0f,0.0f,0.0f,0.0f));
+            Destroy(hitExplode, 4.0f);
             matObj.GetComponent<MeshRenderer>().materials = new Material[] { hitMat };
             Invoke("revertMaterial", 0.25f);
 
-            if (health == 0)
+            if (health <= 0 && !isDead)
             {
                 Debug.Log("ENEMY KILLED");
                 Enemy.enemiesKilled++;
+                Instantiate(deathExplode, other.contacts[0].point, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
+                Destroy(deathExplode, 4.0f);
                 isActive = false;
                 isDead = true;
                 //gameObject.SetActive(false);
