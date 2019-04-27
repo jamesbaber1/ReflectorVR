@@ -96,9 +96,13 @@ MonoBehaviour:
   lazer: {fileID: 121151846650727232, guid: 34362e74452ece04ebe03ae000686838, type: 3}
   minLazerCooldown: 0.5
   manager: {fileID: 0}
+  health: 1
   lazerCooldown: 2
   spawnPos: {fileID: 1451064243640305328}
   player: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
+  matObj: {fileID: 3261623979927454270}
+  hitMat: {fileID: 2100000, guid: a113d1bc1723b2d4a903a87715f4e770, type: 2}
+  origMat: {fileID: 2100000, guid: 2facd102d10295343b5622fc15b73104, type: 2}
   player: {fileID: 107946, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
   radius: 0
 --- !u!195 &1334599316150903839
@@ -250,6 +254,12 @@ PrefabInstance:
 --- !u!4 &3261623979927887384 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400006, guid: dc923512808890045b0a06150530dac1,
+    type: 3}
+  m_PrefabInstance: {fileID: 3261623979927487646}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3261623979927454270 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: dc923512808890045b0a06150530dac1,
     type: 3}
   m_PrefabInstance: {fileID: 3261623979927487646}
   m_PrefabAsset: {fileID: 0}

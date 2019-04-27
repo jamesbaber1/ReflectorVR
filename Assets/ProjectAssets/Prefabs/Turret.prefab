@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1128295319030913657}
   - component: {fileID: 1128295319030913662}
-  - component: {fileID: 1128295319030913663}
   - component: {fileID: 1128295319030913656}
   - component: {fileID: 3959377140880551798}
   - component: {fileID: 7027206402071977102}
@@ -45,43 +44,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128295319030913661}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &1128295319030913663
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1128295319030913661}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 85302289407c3a2488bdd3cf7d350a65, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!114 &1128295319030913656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,9 +59,13 @@ MonoBehaviour:
   lazer: {fileID: 121151846650727232, guid: 34362e74452ece04ebe03ae000686838, type: 3}
   minLazerCooldown: 0.5
   manager: {fileID: 0}
+  health: 3
   lazerCooldown: 2
   spawnPos: {fileID: 3017780049255676695}
   player: {fileID: 1845290972, guid: d570edab5474ee844af215753903448d, type: 3}
+  matObj: {fileID: 1880470859821688094}
+  hitMat: {fileID: 2100000, guid: 99acf065cdd7f404288e1a222fea98ee, type: 2}
+  origMat: {fileID: 2100000, guid: c94ff2c26ba020143966cad226bcac1c, type: 2}
 --- !u!54 &3959377140880551798
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -277,6 +243,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c94ff2c26ba020143966cad226bcac1c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ead20bad07c1a1d46ab7d4cccff9d055, type: 3}
+--- !u!1 &1880470859821688094 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: ead20bad07c1a1d46ab7d4cccff9d055,
+    type: 3}
+  m_PrefabInstance: {fileID: 1880470859821654974}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1880470859821529406 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: ead20bad07c1a1d46ab7d4cccff9d055,

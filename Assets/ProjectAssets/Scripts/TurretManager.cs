@@ -23,6 +23,9 @@ public class TurretManager : MonoBehaviour
     private float frames = 0;
     private bool findTurret = false;
 
+    private int maxRounds = 1;
+    private int round = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,16 +51,38 @@ public class TurretManager : MonoBehaviour
     {
         //Debug.Log("Enemies killed: " + Enemy.enemiesKilled);
         //Debug.Log("Turrets list size: " + turrets.Count);
-        if (Enemy.enemiesKilled >= maxEnemiesToWin)
+        if (Enemy.enemiesKilled >= maxEnemiesToWin && round == maxRounds)
         {
             //Debug.Log("YOU WON THE GAME! :D");
             //Enemy.enemiesKilled = 0;
-            if(elevatorCalled == false)
+            if (elevatorCalled == false)
             {
-                MoveUp.maxVal = 21.5f;
+                MoveUp.maxVal = 56;
                 MoveUp.callElevator = true;
+                Enemy.enemiesKilled = 0;
             }
-            elevatorCalled = true;  
+            elevatorCalled = true;
+        }
+        else if (Enemy.enemiesKilled >= maxEnemiesToWin && round < maxRounds)
+        {
+            turrets.Clear();
+            turretIterator = 0;
+            numberOfTurrets = 8;
+            Enemy.enemiesKilled = 0;
+            round++;
+            float angle = 0;
+            int iterations = 0;
+            while (iterations < numberOfTurrets)
+            {
+                Vector3 position = new Vector3(transform.position.x + radius * Mathf.Cos(Mathf.Deg2Rad * angle), transform.position.y, transform.position.z + radius * Mathf.Sin(Mathf.Deg2Rad * angle));
+                Quaternion rot = Quaternion.AngleAxis(-angle - 90, Vector3.up);
+                GameObject o = Instantiate(turretPrefab, position, rot);
+                turrets.Add(o);
+                angle += (360 / numberOfTurrets);
+                iterations++;
+            }
+            Debug.Log(turrets.Count);
+            SelectTurrets();
         }
         else
         {

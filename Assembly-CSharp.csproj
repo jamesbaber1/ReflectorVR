@@ -406,6 +406,7 @@
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TFHCFlipBookUVAnimation.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TFHCRemap.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Official\OrientationBasedSprite\OrientationBasedSprite.shader" />
+    <None Include="Assets\SkySerie Freebie\Hdri setup.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Community\Dissolve Burn\Credits.txt" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Official\Water\Ground.shader" />

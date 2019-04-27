@@ -58,6 +58,7 @@ public class CrawlerManager : MonoBehaviour
             {
                 MoveUp.maxVal = 56;
                 MoveUp.callElevator = true;
+                Enemy.enemiesKilled = 0;
             }
             elevatorCalled = true;
         }

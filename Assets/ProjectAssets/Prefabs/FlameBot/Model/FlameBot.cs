@@ -61,9 +61,9 @@ public class FlameBot : MonoBehaviour
             health--;
 
             matObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] { hitMat };
-            Invoke("revertMaterial", 0.25f);
+            Invoke("revertMaterial", 0.15f);
 
-            if (health <= 0)
+            if (health == 0)
             {
                 Debug.Log("ENEMY KILLED");
                 Enemy.enemiesKilled++;

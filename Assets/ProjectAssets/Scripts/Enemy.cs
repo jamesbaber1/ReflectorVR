@@ -20,6 +20,10 @@ public class Enemy : MonoBehaviour
     public GameObject spawnPos;
     public GameObject player;
 
+    public GameObject matObj;
+    public Material hitMat;
+    public Material origMat;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +35,11 @@ public class Enemy : MonoBehaviour
     void Update()
     {
 
+    }
+
+    void revertMaterial()
+    {
+        matObj.GetComponent<MeshRenderer>().materials = new Material[] { origMat };
     }
 
 
@@ -108,15 +117,17 @@ public class Enemy : MonoBehaviour
             Destroy(other.gameObject);
             health--;
 
-            //matObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] { hitMat };
-            //Invoke("revertMaterial", 0.25f);
+            matObj.GetComponent<MeshRenderer>().materials = new Material[] { hitMat };
+            Invoke("revertMaterial", 0.25f);
 
-            if (health <= 0)
+            if (health == 0)
             {
                 Debug.Log("ENEMY KILLED");
                 Enemy.enemiesKilled++;
-                gameObject.SetActive(false);
-                Destroy(this.gameObject);
+                isActive = false;
+                isDead = true;
+                //gameObject.SetActive(false);
+                //Destroy(this.gameObject);
             }
 
         }

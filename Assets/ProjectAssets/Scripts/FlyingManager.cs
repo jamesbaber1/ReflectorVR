@@ -53,8 +53,9 @@ public class FlyingManager : MonoBehaviour
             //Enemy.enemiesKilled = 0;
             if (elevatorCalled == false)
             {
-                MoveUp.maxVal = 100;
+                MoveUp.maxVal = 77.5f;
                 MoveUp.callElevator = true;
+                Enemy.enemiesKilled = 0;
             }
             elevatorCalled = true;
         }
