@@ -20,6 +20,10 @@ public class PlayerHealth : MonoBehaviour
     private AudioSource woundedSound;
     private AudioSource DeathSound;
 
+    public GameObject man1;
+    public GameObject man2;
+    public GameObject man3;
+
     private int enemy_tracker;
     private int initial_health = 10;
 
@@ -41,19 +45,15 @@ public class PlayerHealth : MonoBehaviour
             enemy_tracker = Enemy.enemiesKilled;
             setScore();
         }
-        if(health != initial_health)
-        {
-            initial_health = health;
-            setHealth();
-        }
+       
         if(health <= 0)
         {
             //TurretManager.SetActive(false);
             hText.text = "You were killed!";
 
-            GameObject man1 = GameObject.FindGameObjectWithTag("FirstManager");
-            GameObject man2 = GameObject.FindGameObjectWithTag("FirstManager");
-            GameObject man3 = GameObject.FindGameObjectWithTag("FirstManager");
+            //GameObject man1 = GameObject.FindGameObjectWithTag("FirstManager");
+            //GameObject man2 = GameObject.FindGameObjectWithTag("SecondManager");
+            //GameObject man3 = GameObject.FindGameObjectWithTag("ThirdManager");
 
             floor_manager.SetActive(false);
 
@@ -62,16 +62,10 @@ public class PlayerHealth : MonoBehaviour
             man3.SetActive(false);
 
             turrets = GameObject.FindGameObjectsWithTag("turret");
-            lazers = GameObject.FindGameObjectsWithTag("Lazer");
 
-            foreach (GameObject turret in turrets)
+            foreach(GameObject g in turrets)
             {
-                turret.SetActive(false);
-            }
-
-            foreach (GameObject lazer in lazers)
-            {
-                lazer.SetActive(false);
+                Destroy(g);
             }
         }
     }
@@ -116,12 +110,13 @@ public class PlayerHealth : MonoBehaviour
         health--;
     }
 
-        public void OnCollisionEnter(Collision collision)
+        public void OnTriggerEnter(Collider collision)
     {
 
         if(collision.gameObject.CompareTag("Lazer") == true)
         {
             Debug.Log("PLAYER collided with lazer");
+            setHealth();
             health--;
         }
     }

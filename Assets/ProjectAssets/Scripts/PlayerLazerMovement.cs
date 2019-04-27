@@ -41,8 +41,11 @@ public class PlayerLazerMovement : MonoBehaviour
 
         if (other.gameObject.CompareTag("Shield") == true)
         {
-            this.gameObject.SetActive(false);
-            //Destroy(this.gameObject);
+            Destroy(this.gameObject);
+
+            Debug.Log("your shooting your shield");
         }
     }
+
+
 }

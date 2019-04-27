@@ -6,6 +6,7 @@ using Valve.VR.InteractionSystem;
 
 public class PistolScript : MonoBehaviour
 {
+    public GameObject emitter;
     public float coolDownTime = 0.025f;
     public GameObject lazer;
     private bool readyToFire = true;
@@ -58,7 +59,7 @@ public class PistolScript : MonoBehaviour
 
     public void fire()
     {
-        Instantiate(lazer, transform.position + (transform.forward * 0.57f) + (transform.up * 0.06f), transform.rotation);
+        Instantiate(lazer, emitter.transform.position + (emitter.transform.forward * 0.57f) + (emitter.transform.up * 0.06f), emitter.transform.rotation);
         readyToFire = false;
         //lHand.TriggerHapticPulse(pulseSeconds, pulseFrequency, pulseAmplitude);
         StartCoroutine(coolDown());
