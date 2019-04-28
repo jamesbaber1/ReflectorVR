@@ -21,8 +21,8 @@ public class CrawlerManager : MonoBehaviour
     private List<GameObject> turrets;
     private float frames = 0;
     private bool findTurret = false;
-    private int maxRounds = 2;
-    private int round = 0;
+    private int maxRounds = 3;
+    private int round = 1;
     //private bool deactivated = false;
 
     // Start is called before the first frame update

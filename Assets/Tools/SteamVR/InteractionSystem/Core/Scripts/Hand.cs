@@ -1424,8 +1424,8 @@ namespace Valve.VR.InteractionSystem
                         return explicitType;
                 }
 
-                if (explicitType == GrabTypes.Pinch && grabPinchAction.GetStateDown(handType))
-                    return GrabTypes.Pinch;
+                //if (explicitType == GrabTypes.Pinch && grabPinchAction.GetStateDown(handType))
+                //    return GrabTypes.Pinch;
                 if (explicitType == GrabTypes.Grip && grabGripAction.GetStateDown(handType))
                     return GrabTypes.Grip;
             }
@@ -1437,8 +1437,8 @@ namespace Valve.VR.InteractionSystem
                         return GrabTypes.Grip;
                 }
 
-                if (grabPinchAction.GetStateDown(handType))
-                    return GrabTypes.Pinch;
+                //if (grabPinchAction.GetStateDown(handType))
+                //    return GrabTypes.Pinch;
                 if (grabGripAction.GetStateDown(handType))
                     return GrabTypes.Grip;
             }

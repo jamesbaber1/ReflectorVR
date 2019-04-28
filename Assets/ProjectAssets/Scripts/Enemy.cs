@@ -48,7 +48,7 @@ public class Enemy : MonoBehaviour
 
     void revertMaterial()
     {
-        matObj.GetComponent<MeshRenderer>().materials = new Material[] { origMat };
+        matObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] { origMat };
     }
 
 
@@ -140,19 +140,17 @@ public class Enemy : MonoBehaviour
 
             Instantiate(hitExplode, other.contacts[0].point, new Quaternion (0.0f,0.0f,0.0f,0.0f));
             Destroy(hitExplode, 4.0f);
-            matObj.GetComponent<MeshRenderer>().materials = new Material[] { hitMat };
-            Invoke("revertMaterial", 0.25f);
+            matObj.GetComponent<SkinnedMeshRenderer>().materials = new Material[] { hitMat };
+            Invoke("revertMaterial", 0.1f);
 
             if (health <= 0 && !isDead)
             {
                 Debug.Log("ENEMY KILLED");
                 Enemy.enemiesKilled++;
                 Instantiate(deathExplode, other.contacts[0].point, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
-                Destroy(deathExplode, 4.0f);
+                Destroy(deathExplode.gameObject, 4.0f);
                 isActive = false;
                 isDead = true;
-                //gameObject.SetActive(false);
-                //Destroy(this.gameObject);
             }
 
         }

@@ -18,13 +18,12 @@ public class TurretManager : MonoBehaviour
 
     private bool elevatorCalled = false;
     private int turretIterator = 0;
-    private float cooldownFrames = 300;
+    private float cooldownFrames = 280;
     private List<GameObject> turrets;
     private float frames = 0;
     private bool findTurret = false;
-
-    private int maxRounds = 1;
-    private int round = 0;
+    private int maxRounds = 2;
+    private int round = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -49,22 +48,23 @@ public class TurretManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //Debug.Log("Enemies killed: " + Enemy.enemiesKilled);
-        //Debug.Log("Turrets list size: " + turrets.Count);
+        Debug.Log("Enemies killed: " + Enemy.enemiesKilled);
+        Debug.Log("Turrets list size: " + turrets.Count);
         if (Enemy.enemiesKilled >= maxEnemiesToWin && round == maxRounds)
         {
-            //Debug.Log("YOU WON THE GAME! :D");
-            //Enemy.enemiesKilled = 0;
+            eraseDead();
+            Debug.Log("YOU WON THE GAME! :D");
+            Enemy.enemiesKilled = 0;
             if (elevatorCalled == false)
             {
-                MoveUp.maxVal = 21;
+                MoveUp.maxVal = 21.5f;
                 MoveUp.callElevator = true;
-                Enemy.enemiesKilled = 0;
             }
             elevatorCalled = true;
         }
         else if (Enemy.enemiesKilled >= maxEnemiesToWin && round < maxRounds)
         {
+            eraseDead();
             turrets.Clear();
             turretIterator = 0;
             numberOfTurrets = 8;
@@ -87,7 +87,7 @@ public class TurretManager : MonoBehaviour
         else
         {
             eraseDead();
-            if (findTurret == true)
+            if (findTurret == true && turrets.Count > 0)
             {
                 //Debug.Log("find turret is true");
                 Enemy turret = turrets[turretIterator].GetComponent<Enemy>();

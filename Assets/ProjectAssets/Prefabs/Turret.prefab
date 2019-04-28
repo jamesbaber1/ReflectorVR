@@ -65,11 +65,11 @@ MonoBehaviour:
   minLazerCooldown: 0.5
   manager: {fileID: 0}
   health: 3
-  lazerCooldown: 2
+  lazerCooldown: 1.5
   spawnPos: {fileID: 3017780049255676695}
   spawnPos2: {fileID: 3017780049255676695}
   player: {fileID: 1845290972, guid: d570edab5474ee844af215753903448d, type: 3}
-  matObj: {fileID: 1880470859821688094}
+  matObj: {fileID: 3252651829471782246}
   hitMat: {fileID: 2100000, guid: 99acf065cdd7f404288e1a222fea98ee, type: 2}
   origMat: {fileID: 2100000, guid: c94ff2c26ba020143966cad226bcac1c, type: 2}
 --- !u!54 &3959377140880551798
@@ -98,8 +98,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.35
-  m_Height: 1.5
+  m_Radius: 0.5
+  m_Height: 2.25
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!1 &3017780049255676695
@@ -253,12 +253,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c94ff2c26ba020143966cad226bcac1c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ead20bad07c1a1d46ab7d4cccff9d055, type: 3}
---- !u!1 &1880470859821688094 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100000, guid: ead20bad07c1a1d46ab7d4cccff9d055,
-    type: 3}
-  m_PrefabInstance: {fileID: 1880470859821654974}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1880470859821529406 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: ead20bad07c1a1d46ab7d4cccff9d055,
@@ -349,6 +343,12 @@ Animator:
 --- !u!4 &3252651829791101117 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 413265537, guid: 2c3f0b3010f3b47bd84f4f9eddcfea15,
+    type: 3}
+  m_PrefabInstance: {fileID: 3252651829377957436}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3252651829471782246 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 229137242, guid: 2c3f0b3010f3b47bd84f4f9eddcfea15,
     type: 3}
   m_PrefabInstance: {fileID: 3252651829377957436}
   m_PrefabAsset: {fileID: 0}
