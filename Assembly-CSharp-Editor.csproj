@@ -60,6 +60,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ProjectAssets\FX\JMO Assets\Cartoon FX Easy Editor\Editor\CFXEasyEditor.cs" />
+    <Compile Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Editor\CFX_SpawnSystemEditor.cs" />
     <Compile Include="Assets\Tools\AmplifyShaderEditor\Plugins\Editor\Actions\ActionData.cs" />
     <Compile Include="Assets\Tools\AmplifyShaderEditor\Plugins\Editor\Actions\ActionLog.cs" />
     <Compile Include="Assets\Tools\AmplifyShaderEditor\Plugins\Editor\Actions\ActionSequence.cs" />

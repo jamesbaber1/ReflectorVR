@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TurretScript : Enemy
 {
-
+    
     //private static int activeNum;
 
     //public GameObject lazer;
@@ -23,6 +23,8 @@ public class TurretScript : Enemy
         SpawnLazer();
     }
 
+
+    
     // Update is called once per frame
     void Update()
     {
@@ -73,14 +75,14 @@ public class TurretScript : Enemy
     }
     */
 
-     /*
-    public void SetLazerCooldown(float f)
-    {
-        if(f >= minLazerCooldown)
-        {
-            lazerCooldown = f;
-        }
-    }
+    /*
+   public void SetLazerCooldown(float f)
+   {
+       if(f >= minLazerCooldown)
+       {
+           lazerCooldown = f;
+       }
+   }
 */
 
     /*
@@ -110,4 +112,6 @@ public class TurretScript : Enemy
         }
     }
     */
+
+    
 }

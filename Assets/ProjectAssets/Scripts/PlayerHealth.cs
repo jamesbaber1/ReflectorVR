@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public TextMeshPro instructionText;
     //public GameObject TurretManager;
     public AudioClip death;
-    public static int health = 10;
+    public static int health = 100;
     public GameObject floor_manager;
 
     private GameObject[] turrets;

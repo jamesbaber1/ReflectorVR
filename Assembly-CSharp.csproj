@@ -60,6 +60,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
+    <Compile Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Demo\Assets\CFX_Demo_RandomDir.cs" />
+    <Compile Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Demo\Assets\CFX_Demo_RotateCamera.cs" />
+    <Compile Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Demo\Assets\CFX_Demo_Translate.cs" />
+    <Compile Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Demo\Assets\WFX_Demo.cs" />
+    <Compile Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Demo\Assets\WFX_Demo_DeleteAfterDelay.cs" />
+    <Compile Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Demo\Assets\WFX_Demo_New.cs" />
+    <Compile Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Demo\Assets\WFX_Demo_RandomDir.cs" />
+    <Compile Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Demo\Assets\WFX_Demo_Wall.cs" />
+    <Compile Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Scripts\CFX_AutoDestructShuriken.cs" />
+    <Compile Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Scripts\CFX_LightIntensityFade.cs" />
+    <Compile Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Scripts\WFX_BulletHoleDecal.cs" />
+    <Compile Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Scripts\WFX_LightFlicker.cs" />
+    <Compile Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Spawn System\CFX_SpawnSystem.cs" />
     <Compile Include="Assets\ProjectAssets\Prefabs\FlameBot\Flame\flameBurst.cs" />
     <Compile Include="Assets\ProjectAssets\Prefabs\FlameBot\Model\FlameBot.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\CrawlerManager.cs" />
@@ -142,6 +156,7 @@
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ExpOpNode.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_WorldTransformParams.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SwizzleNode.shader" />
+    <None Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Shaders\WFX_S AlphaBlend Scroll.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_CosOpNode.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_FunctionNode.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Official\AnimatedUVDistortion\AnimatedUVDistortion.shader" />
@@ -176,11 +191,13 @@
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Official\SnowAccum\SnowAccum.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TangentSignVertexDataNode.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_CeilOpNode.shader" />
+    <None Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Shaders\WFX_S Particle AddSoft A8.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_VertexBinormalNode.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Official\PositionCutoff\LocalPosCutoff.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Official\TemplateExamples\Sprites\SpriteMask\SpritesMask.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ScreenPosInputsNode.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TangentVertexDataNode.shader" />
+    <None Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Shaders\WFX_S Alpha-Specular TintColor.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Community\SingleChannelMasking\SingleChannelMasking.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Community\Skybox Cubemap Extended\Credits.txt" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_PiNode.shader" />
@@ -188,9 +205,11 @@
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TFHCCompareLessNode.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Community\Dissolve Burn\DissolveBurn.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ObjSpaceLightDirHlpNode.shader" />
+    <None Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Shaders\WFX_S AlphaBlend NoSoftParticles.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Official\RimLight\RimLight.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ASinOpNode.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Official\CubemapReflections\CubemapReflections.shader" />
+    <None Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\_Effects\MuzzleFlashes\!MuzzleFlash Differences.txt" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_DeltaTime.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Official\TemplateExamples\Particles\HeatHaze\ParticlesTest.shader" />
     <None Include="Assets\ProjectAssets\Materials\metalWalls.shader" />
@@ -202,6 +221,7 @@
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_VertexTangentNode.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_RoundOpNode.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_WorldSpaceLightPosNode.shader" />
+    <None Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Shaders\WFX_S Smoke Scroll.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Community\2Sided\2Sided.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_GetLocalVarNode.shader" />
@@ -219,7 +239,9 @@
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_RGBToHSVNode.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Official\Outline\Outline.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ClampOpNode.shader" />
+    <None Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Shaders\WFX_S Add Scroll.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Credits.txt" />
+    <None Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\!WarFX Readme.txt" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Community\HighlightAnimated\Highlight_Animated.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Community\Melting\Melting.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Official\TemplateExamples\Sprites\SimpleSprite\SimpleSprite.shader" />
@@ -261,11 +283,14 @@
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Official\SimpleBlur\SimpleBlur.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TFHCCompareNotEqual.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_DiffuseAndSpecularFromMetallic.shader" />
+    <None Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Shaders\WFX_S Particle Add A8.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_TexCoordVertexDataNode.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ColorSpaceDouble.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Official\TemplateExamples\UI\SimpleUI\SimpleUI.shader" />
+    <None Include="Assets\ProjectAssets\FX\JMO Assets\Cartoon FX Easy Editor\CartoonFX Easy Editor Readme.txt" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Official\XRay\ProceduralWall.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Official\SimpleNoise\SimpleNoise.shader" />
+    <None Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\_Effects (Mobile)\MuzzleFlashes\!MuzzleFlash Differences.txt" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_LinearToGammaNode.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Official\ParallaxOcclusionMappingPOM\SandPOM.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_SaturateNode.shader" />
@@ -308,6 +333,7 @@
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_PannerNode.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ScaleNode.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Community\HologramSimple\Credits.txt" />
+    <None Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Shaders\WFX_S Multiply Soft Scroll.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_LogOpNode.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_AppendNode.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Official\CustomRTRain\Readme.txt" />
@@ -315,6 +341,7 @@
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_BreakToComponentsNode.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Official\UnlitWithLightmap\UnlitWithLightmap.shader" />
+    <None Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Shaders\WFX_S Particle Multiply A8.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_GammaToLinearNode.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_WorldReflectionVector.shader" />
@@ -326,6 +353,7 @@
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Official\SimpleTerrain\SimpleWater.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_WeightedBlendNode.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_IndirectDiffuseLight.shader" />
+    <None Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Shaders\WFX_S Multiply Soft.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_AbsOpNode.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Community\ForceShield\ForceShield.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_OneMinusNode.shader" />
@@ -365,6 +393,7 @@
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Templates\Legacy\UnlitLightmap.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Official\MultiPassDistortion\MultiPassDistortion.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Official\MultiPassDistortion\DoublePassUnlitTemplate.shader" />
+    <None Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Shaders\WFX_S Alpha-Diffuse TintColor.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Examples\Official\WorldPosSLices\WorldPosSlices.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_ColorNode.shader" />
     <None Include="Assets\Tools\AmplifyShaderEditor\Plugins\EditorResources\Previews\Preview_LinearDepthNode.shader" />

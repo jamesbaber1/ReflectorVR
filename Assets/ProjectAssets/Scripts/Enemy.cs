@@ -6,9 +6,13 @@ public class Enemy : MonoBehaviour
 {
     protected static int activeNum;
 
+
+    public Animator Anim;
+
     public GameObject deathExplode;
     public GameObject hitExplode;
     public GameObject lazer;
+    public GameObject muzzleFlash;
     public float minLazerCooldown;
     public GameObject manager;
     public static int enemiesKilled = 0;
@@ -20,17 +24,20 @@ public class Enemy : MonoBehaviour
     //private Material mat;
     public float lazerCooldown;
     public GameObject spawnPos;
+    public GameObject spawnPos2;
     public GameObject player;
 
     public GameObject matObj;
     public Material hitMat;
     public Material origMat;
 
+    private GameObject tempFlash;
+
     // Start is called before the first frame update
     void Start()
     {
         //mat = light.GetComponent<Renderer>().material;
-        SpawnLazer();
+        StartCoroutine(startTurrets());
     }
 
     // Update is called once per frame
@@ -49,8 +56,19 @@ public class Enemy : MonoBehaviour
     {
         if (isActive == true)
         {
-            Instantiate(lazer, spawnPos.transform.position, transform.rotation);
+            Instantiate(lazer, spawnPos.transform.position, spawnPos.transform.rotation);
+            tempFlash = Instantiate(muzzleFlash, spawnPos.transform.position, spawnPos.transform.rotation);
+            Destroy(tempFlash, 0.2f);
+
+
+            Instantiate(lazer, spawnPos2.transform.position, spawnPos2.transform.rotation);
+            tempFlash = Instantiate(muzzleFlash, spawnPos2.transform.position, spawnPos2.transform.rotation);
+            Destroy(tempFlash, 0.2f);
+
+
             //mat.color = Color.green; //CHANGE LIGHT SOURCE TO ON
+
+            StartCoroutine(Fire());
         }
         else
         {
@@ -143,5 +161,18 @@ public class Enemy : MonoBehaviour
     private void OnDestroy()
     {
         CancelInvoke();
+    }
+
+    IEnumerator Fire()
+    {
+        Anim.SetBool("Shoot", true);
+        yield return new WaitForSeconds(1);
+        Anim.SetBool("Shoot", false);
+    }
+
+    IEnumerator startTurrets()
+    {
+        yield return new WaitForSeconds(3);
+        SpawnLazer();
     }
 }
