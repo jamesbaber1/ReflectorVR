@@ -48,11 +48,11 @@ public class CrawlerManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //Debug.Log("Enemies killed: " + Enemy.enemiesKilled);
-        //Debug.Log("Turrets list size: " + turrets.Count);
+        ////Debug.Log("Enemies killed: " + Enemy.enemiesKilled);
+        ////Debug.Log("Turrets list size: " + turrets.Count);
         if (Enemy.enemiesKilled >= maxEnemiesToWin && round == maxRounds)
         {
-            //Debug.Log("YOU WON THE GAME! :D");
+            ////Debug.Log("YOU WON THE GAME! :D");
             //Enemy.enemiesKilled = 0;
             if (elevatorCalled == false)
             {
@@ -80,7 +80,7 @@ public class CrawlerManager : MonoBehaviour
                 angle += (360 / numberOfTurrets);
                 iterations++;
             }
-            Debug.Log(turrets.Count);
+            ////Debug.Log(turrets.Count);
             //SelectTurrets();
         }
         /*
@@ -89,13 +89,13 @@ public class CrawlerManager : MonoBehaviour
             eraseDead();
             if (findTurret == true)
             {
-                //Debug.Log("find turret is true");
+                ////Debug.Log("find turret is true");
                 Enemy turret = turrets[turretIterator].GetComponent<Enemy>();
                 int badCount = 0;
                 while ((turret.getActive() == true ) && badCount <= turrets.Count)
                 {
                     badCount++;
-                    //Debug.Log("badCount: " + badCount);
+                    ////Debug.Log("badCount: " + badCount);
                     turretIterator++;
                     if (turretIterator >= turrets.Count)
                     {
@@ -103,7 +103,7 @@ public class CrawlerManager : MonoBehaviour
                     }
                     turret = turrets[turretIterator].GetComponent<Enemy>();
                 }
-                //Debug.Log("final badCount: " + badCount);
+                ////Debug.Log("final badCount: " + badCount);
                 if (badCount <= turrets.Count)
                 {
                     activateTurret(turretIterator);

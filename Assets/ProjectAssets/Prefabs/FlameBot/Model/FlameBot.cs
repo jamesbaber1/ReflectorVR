@@ -54,7 +54,7 @@ public class FlameBot : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Lazer") == true)
         {
-            Debug.Log("Enemy and lazer are colliding");
+            //Debug.Log("Enemy and lazer are colliding");
 
             Instantiate(hitExplode, other.contacts[0].point, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
             Destroy(hitExplode, 4.0f);
@@ -70,7 +70,7 @@ public class FlameBot : MonoBehaviour
 
             if (health == 0)
             {
-                Debug.Log("ENEMY KILLED");
+                //Debug.Log("ENEMY KILLED");
                 Instantiate(deathExplode, other.contacts[0].point, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
                 Destroy(deathExplode, 4.0f);
                 Enemy.enemiesKilled++;

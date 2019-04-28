@@ -132,7 +132,7 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Lazer") == true)
         {
-            Debug.Log("Enemy and lazer are colliding");
+            //Debug.Log("Enemy and lazer are colliding");
             //mat.color = Color.red;
             Destroy(other.gameObject);
             health--;
@@ -145,7 +145,7 @@ public class Enemy : MonoBehaviour
 
             if (health <= 0 && !isDead)
             {
-                Debug.Log("ENEMY KILLED");
+                //Debug.Log("ENEMY KILLED");
                 Enemy.enemiesKilled++;
                 Instantiate(deathExplode, other.contacts[0].point, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
                 Destroy(deathExplode.gameObject, 4.0f);

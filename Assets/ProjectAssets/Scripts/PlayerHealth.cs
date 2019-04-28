@@ -25,12 +25,16 @@ public class PlayerHealth : MonoBehaviour
     public GameObject man3;
 
     private int enemy_tracker;
-    private int initial_health = 10;
+    private int initial_health = 100;
+
+    public static bool hitByFlame = false;
 
 
 
     private void Start()
     {
+        hText.text = "Health " + health;
+        sText.text = "Score " + score;
         instructionText.text = "PREPARE YOURSELF\n\nGRAB THIS SHIELD";
         InvokeRepeating("InstructionCountDown", 1f, 1f);
         woundedSound = GetComponent<AudioSource>();
@@ -44,6 +48,11 @@ public class PlayerHealth : MonoBehaviour
         {
             enemy_tracker = Enemy.enemiesKilled;
             setScore();
+        }
+
+        if(hitByFlame == true)
+        {
+            setHealth();
         }
        
         if(health <= 0)
@@ -75,7 +84,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void setHealth()
     {
-        //Debug.Log("DECREASING HEALTH");
+        ////Debug.Log("DECREASING HEALTH");
         woundedSound.Play();
         hText.text = "Health " + health;
         //Debug.Log("Health " + health);
@@ -102,12 +111,6 @@ public class PlayerHealth : MonoBehaviour
             floor_manager.SetActive(true);
             instructionText.text = "";
         }
-    }
-
-    void OnParticleCollision(GameObject other)
-    {
-        Debug.Log("PLAYER collided with particles");
-        health--;
     }
 
         public void OnTriggerEnter(Collider collision)
