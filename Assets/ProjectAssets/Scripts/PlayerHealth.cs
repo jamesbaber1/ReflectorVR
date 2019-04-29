@@ -29,14 +29,18 @@ public class PlayerHealth : MonoBehaviour
 
     public static bool hitByFlame = false;
 
+    public void startGame()
+    {
+        InvokeRepeating("InstructionCountDown", 1f, 1f);
+    }
+
 
 
     private void Start()
     {
         hText.text = "Health " + health;
-        sText.text = "Score " + score;
+        sText.text = "Score " + (score * 25);
         instructionText.text = "PREPARE YOURSELF\n\nGRAB THIS SHIELD";
-        InvokeRepeating("InstructionCountDown", 1f, 1f);
         woundedSound = GetComponent<AudioSource>();
         DeathSound = GetComponent<AudioSource>();
         enemy_tracker = Enemy.enemiesKilled;
@@ -94,7 +98,7 @@ public class PlayerHealth : MonoBehaviour
     {
         //Debug.Log("INCREASING SCORE");
         score++;
-        sText.text = "Score " + score;
+        sText.text = "Score " + (score * 25);
         //Debug.Log("Score " + score);
     }
 

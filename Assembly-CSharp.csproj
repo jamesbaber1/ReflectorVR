@@ -88,9 +88,12 @@
     <Compile Include="Assets\ProjectAssets\Scripts\MoveUp.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\MovingEnemy.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\PistolScript.cs" />
+    <Compile Include="Assets\ProjectAssets\Scripts\PlayAgainButton.cs" />
+    <Compile Include="Assets\ProjectAssets\Scripts\PlayButton.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\PlayerLazerMovement.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\QuitApp.cs" />
+    <Compile Include="Assets\ProjectAssets\Scripts\QuitButton.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\ShieldScript.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\SteamVR_LoadLevel.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\TestNav.cs" />
