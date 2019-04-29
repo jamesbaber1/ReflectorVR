@@ -76,6 +76,7 @@
     <Compile Include="Assets\ProjectAssets\FX\JMO Assets\WarFX\Spawn System\CFX_SpawnSystem.cs" />
     <Compile Include="Assets\ProjectAssets\Prefabs\FlameBot\Flame\flameBurst.cs" />
     <Compile Include="Assets\ProjectAssets\Prefabs\FlameBot\Model\FlameBot.cs" />
+    <Compile Include="Assets\ProjectAssets\Scripts\BarrelShot.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\CrawlerManager.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\CrawlingEnemy.cs" />
     <Compile Include="Assets\ProjectAssets\Scripts\DeactivateLazers.cs" />

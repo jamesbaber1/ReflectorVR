@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayAgainButton : MonoBehaviour
 {
@@ -21,14 +22,16 @@ public class PlayAgainButton : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Lazer") == true)
         {
-            Debug.Log("UI Quit and lazer are colliding");
+            Debug.Log("Load Level button and laser are colliding");
 
             Destroy(other.gameObject);
+            Destroy(this.gameObject);
             Instantiate(hitExplode, other.contacts[0].point, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
             Destroy(hitExplode, 4.0f);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            // loadLevel.SetActive(true);
             //Destroy(this.gameObject);
-
-            Application.Quit();
+            //Application.Quit();
         }
     }
 }
