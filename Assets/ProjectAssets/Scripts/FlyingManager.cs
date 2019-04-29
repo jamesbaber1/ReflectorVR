@@ -51,6 +51,7 @@ public class FlyingManager : MonoBehaviour
         ////Debug.Log("Turrets list size: " + turrets.Count);
         if (Enemy.enemiesKilled >= maxEnemiesToWin && round == maxRounds)
         {
+            eraseDead();
             ////Debug.Log("YOU WON THE GAME! :D");
             //Enemy.enemiesKilled = 0;
             if (elevatorCalled == false)
@@ -63,6 +64,7 @@ public class FlyingManager : MonoBehaviour
         }
         else if (Enemy.enemiesKilled >= maxEnemiesToWin && round < maxRounds)
         {
+            eraseDead();
             turrets.Clear();
             turretIterator = 0;
             numberOfTurrets = 16;
